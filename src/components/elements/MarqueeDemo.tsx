@@ -29,25 +29,25 @@ const reviews = [
     {
         name: "Palak",
         username: "@palak",
-        body: "He is a quick learner and adapts well to new challenges. She is a valuable asset to any project.",
+        body: "He is a quick learner and adapts well to new challenges. He is a valuable asset to any project.",
         img: "https://avatar.vercel.sh/palak",
     },
     {
         name: "Mahek",
         username: "@mahek",
-        body: "He has excellent communication skills and works well with others. She is a great collaborator.",
+        body: "He has excellent communication skills and works well with others. He is a great collaborator.",
         img: "https://avatar.vercel.sh/mahek",
     },
     {
         name: "Nidhi",
         username: "@nidhi",
-        body: "He is a highly motivated individual who consistently exceeds expectations. She is a pleasure to work with.",
+        body: "He is a highly motivated individual who consistently exceeds expectations. He is a pleasure to work with.",
         img: "https://avatar.vercel.sh/nidhi",
     },
     {
         name: "Priti",
         username: "@priti",
-        body: "He is a detail-oriented professional who always delivers high-quality work. She is a great team player.",
+        body: "He is a detail-oriented professional who always delivers high-quality work. He is a great team player.",
         img: "https://avatar.vercel.sh/priti",
     },
     {
@@ -65,7 +65,7 @@ const reviews = [
     {
         name: "Neha",
         username: "@neha",
-        body: "He is a creative and innovative thinker. She brings fresh ideas to every project she works on.",
+        body: "He is a creative and innovative thinker. He brings fresh ideas to every project she works on.",
         img: "https://avatar.vercel.sh/neha",
     },
     {

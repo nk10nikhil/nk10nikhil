@@ -22,7 +22,7 @@ const StyledWrapper = styled.div`
     height: 40.4px;
     --clr: #DE00FF;
     --clr-alpha: rgb(247, 197, 159,.1);
-    animation: spinner 1.6s infinite ease;
+    animation: spinner 1.8s infinite ease;
     transform-style: preserve-3d;
   }
 

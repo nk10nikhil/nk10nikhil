@@ -10,6 +10,7 @@ import DigitalLamp from "@/components/universeio/DigitalLamp";
 import { OrbitingCirclesDemo } from "@/components/elements/OrbitingCirclesDemo";
 import ParallaxScroll from "@/components/elements/ParallaxScroll";
 import TechStack from "@/components/section/TechStack";
+import LinkedCircularSkills from "@/components/elements/LinkedCircularSkills";
 
 const Skills = () => {
     useEffect(() => {
@@ -39,24 +40,24 @@ const Skills = () => {
                         transition={{ duration: 0.5 }}
                         className="text-center"
                     >
-                        <div className="flex flex-col items-center justify-center bg-black/25 bg-opacity-10 rounded-lg p-4 mb-4">
+                        <div className="flex flex-col items-center justify-center bg-black/25 bg-opacity-10 rounded-lg p-4">
                             <h1 className="text-4xl md:text-5xl font-bold heading-gradient">My Skills</h1>
                             <div className="flex flex-row items-center justify-center space-x-4">
-                                <div className="flex items-center justify-center">
+                                <div className="flex items-center justify-center pt-5">
                                     <OrbitingCirclesDemo />
                                 </div>
                                 <div className="flex flex-col items-center justify-center">
 
-                                    <p className="text-lg text-muted-foreground max-w-3xl">
-                                        I have a wide range of skills and experience in the field of web development. Here are some of the
-                                        technologies I have worked with.
+                                    <p className="text-lg text-muted-foreground max-w-3xl hidden md:block">
+                                        I have developed a wide range of skills in web development and software engineering. From designing user-friendly interfaces to building scalable backend systems, I focus on creating efficient digital solutions. Below is an overview of the technologies and tools I have mastered.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <SkillsSection />
-                        <TechStack />
+                        {/* <SkillsSection /> */}
+                        {/* <TechStack /> */}
+                        <LinkedCircularSkills />
                     </motion.div>
                 </section>
             </main>

@@ -5,6 +5,72 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes floatLCS {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes orbitLCS {
+  from {
+    transform: rotate3d(1, 0, 1, 0deg) translateX(200px) rotate3d(1, 0, 1, 0deg);
+  }
+
+  to {
+    transform: rotate3d(1, 0, 1, 360deg) translateX(200px) rotate3d(1, 0, 1, -360deg);
+  }
+}
+
+@keyframes glowLCS {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 15px rgba(147, 51, 234, 0.7));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 25px rgba(147, 51, 234, 0.9));
+  }
+}
+
+.orbital-containerLCS {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.orbital-iconLCS {
+  position: absolute;
+  animation: orbit 20s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.center-logoLCS {
+  animation: glow 3s ease-in-out infinite;
+  position: relative;
+  z-index: 20;
+}
+
+.floating-iconsLCS {
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+}
+
+.connection-lineLCS {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(147, 51, 234, 0.5) 0%, rgba(147, 51, 234, 0) 100%);
+  transform-origin: top;
+  z-index: 10;
+}
+
 @layer base {
   :root {
     --background: 0 0 0;

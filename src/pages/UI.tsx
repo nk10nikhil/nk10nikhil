@@ -8,6 +8,7 @@ import Navbar from "@/components/section/Navbar";
 import Footer from "@/components/section/Footer";
 import AnimatedDice from "@/components/uilibrary/AnimatedDice";
 import GradientChangingText from "@/components/uilibrary/GradientChangingText";
+import AnimatedText from "@/components/uilibrary/AnimatedText";
 
 
 
@@ -34,6 +35,7 @@ const UI = () => {
                 <ThreeDMarqueeDemo />
                 <AnimatedDice />
                 <GradientChangingText />
+                <AnimatedText />
 
             </div>
 

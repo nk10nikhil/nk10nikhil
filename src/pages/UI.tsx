@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/elements/ThemeProvider";
 import { ThreeDMarqueeDemo } from "@/components/uilibrary/ThreeDMarqueeDemo";
 import Navbar from "@/components/section/Navbar";
 import Footer from "@/components/section/Footer";
+import AnimatedDice from "@/components/uilibrary/AnimatedDice";
 
 
 
@@ -28,8 +29,9 @@ const UI = () => {
             {/* Main Content */}
             <h1 className="flex items-center justify-center text-gradient text-4xl md:text-5xl font-bold heading-gradient">UI Library</h1>
 
-            <div className="flex flex-col items-center justify-center mt-10 md:mt-20 space-y-10">
+            <div className="flex flex-col items-center justify-center my-10 md:my-20 space-y-40">
                 <ThreeDMarqueeDemo />
+                <AnimatedDice />
 
             </div>
 

@@ -132,7 +132,7 @@ const Navbar = () => {
               </Button>
             </div>
             <div className="px-4 pb-2">
-              <Button className="w-full bg-gradient-to-br from-primary via-purple-500 to-indigo-400 animate-glow hover:bg-primary/90"><a href="/contact">Contact Me</a></Button>
+              <Button className="w-full bg-gradient-to-br from-primary via-purple-500 to-indigo-400 animate-glow hover:bg-primary/90"><Link to="/contact">Contact Me</Link></Button>
             </div>
           </div>
         </motion.div>

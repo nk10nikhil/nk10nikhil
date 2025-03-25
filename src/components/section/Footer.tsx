@@ -95,12 +95,13 @@ const Temp = () => {
             © {currentYear} nk10nikhil. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0 text-sm text-muted-foreground">
-            <a href="/temp" className="hover:text-foreground transition-colors">
+
+            <Link to="/temp" className="hover:text-foreground transition-colors">
               Privacy Policy
-            </a>
-            <a href="/temp" className="hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/temp" className="hover:text-foreground transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

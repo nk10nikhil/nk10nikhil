@@ -21,7 +21,6 @@ const Temp = () => {
       {/* <P5Background /> */}
       <BlurBackground />
       <FloatingObjects />
-      <ThreeDMarqueeDemo />
 
       {/* Main Content */}
 

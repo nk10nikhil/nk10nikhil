@@ -18,7 +18,7 @@ const Temp = () => {
       className="bg-transparent min-h-screen relative"
     >
       {/* Background Elements */}
-      <P5Background />
+      {/* <P5Background /> */}
       <BlurBackground />
       <FloatingObjects />
       <ThreeDMarqueeDemo />

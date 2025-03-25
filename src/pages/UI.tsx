@@ -4,6 +4,8 @@ import BlurBackground from "@/components/elements/BlurBackground";
 import FloatingObjects from "@/components/elements/FloatingObjects";
 import { ThemeProvider } from "@/components/elements/ThemeProvider";
 import { ThreeDMarqueeDemo } from "@/components/temp/ThreeDMarqueeDemo";
+import Navbar from "@/components/section/Navbar";
+import Footer from "@/components/section/Footer";
 
 
 
@@ -15,18 +17,25 @@ const UI = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="bg-transparent min-h-screen relative"
+            className="bg-transparent min-h-screen relative py-20 md:py-28 "
         >
             {/* Background Elements */}
-            <P5Background />
+            <P5Background className="blur-sm"/>
             <BlurBackground />
             <FloatingObjects />
-            <ThreeDMarqueeDemo />
+            <Navbar />
 
             {/* Main Content */}
+            <h1 className="flex items-center justify-center text-gradient text-4xl md:text-5xl font-bold heading-gradient">UI Library</h1>
+
+            <div className="grid gap-4 p-4">
+                <ThreeDMarqueeDemo />
+
+            </div>
 
 
 
+            <Footer />
         </motion.div>
     );
 };

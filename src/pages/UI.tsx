@@ -3,7 +3,7 @@ import P5Background from "@/components/elements/P5Background";
 import BlurBackground from "@/components/elements/BlurBackground";
 import FloatingObjects from "@/components/elements/FloatingObjects";
 import { ThemeProvider } from "@/components/elements/ThemeProvider";
-import { ThreeDMarqueeDemo } from "@/components/temp/ThreeDMarqueeDemo";
+import { ThreeDMarqueeDemo } from "@/components/uilibrary/ThreeDMarqueeDemo";
 import Navbar from "@/components/section/Navbar";
 import Footer from "@/components/section/Footer";
 
@@ -20,7 +20,7 @@ const UI = () => {
             className="bg-transparent min-h-screen relative py-20 md:py-28 "
         >
             {/* Background Elements */}
-            <P5Background className="blur-sm"/>
+            <P5Background className="blur-sm" />
             <BlurBackground />
             <FloatingObjects />
             <Navbar />

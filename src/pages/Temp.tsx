@@ -4,6 +4,7 @@ import BlurBackground from "@/components/elements/BlurBackground";
 import FloatingObjects from "@/components/elements/FloatingObjects";
 import { ThemeProvider } from "@/components/elements/ThemeProvider";
 import { ThreeDMarqueeDemo } from "@/components/uilibrary/ThreeDMarqueeDemo";
+import Temp from "@/components/temp/Temp";
 
 
 
@@ -18,11 +19,13 @@ const Temp = () => {
       className="bg-transparent min-h-screen relative"
     >
       {/* Background Elements */}
-      {/* <P5Background /> */}
+      <P5Background />
       <BlurBackground />
       <FloatingObjects />
 
       {/* Main Content */}
+      <div><Temp /></div>
+      
 
 
 

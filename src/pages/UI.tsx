@@ -9,7 +9,6 @@ import Footer from "@/components/section/Footer";
 import AnimatedDice from "@/components/uilibrary/AnimatedDice";
 import GradientChangingText from "@/components/uilibrary/GradientChangingText";
 import AnimatedText from "@/components/uilibrary/AnimatedText";
-import ScrollNapping from "@/components/uilibrary/ScrollNaping";
 import RotatingMarquee from "@/components/uilibrary/RotatingMarquee";
 
 
@@ -34,12 +33,11 @@ const UI = () => {
             <h1 className="flex items-center justify-center text-gradient text-4xl md:text-5xl font-bold heading-gradient">UI Library</h1>
 
             <div className="flex flex-col items-center justify-center my-10 md:my-20 space-y-40">
-                <ThreeDMarqueeDemo />
-                <AnimatedDice />
-                <GradientChangingText />
-                <AnimatedText />
-                {/* <ScrollNapping /> */}
-                <RotatingMarquee />
+                {/* <ThreeDMarqueeDemo /> */}
+                {/* <AnimatedDice /> */}
+                {/* <GradientChangingText /> */}
+                {/* <AnimatedText /> */}
+                {/* <RotatingMarquee /> */}
 
             </div>
 

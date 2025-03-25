@@ -68,7 +68,7 @@
     "react-router-dom": "^6.26.2",
     "recharts": "^2.12.7",
     "sonner": "^1.5.0",
-    "styled-components": "^6.1.15",
+    "styled-components": "^6.1.16",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "tweakpane": "^4.0.5",

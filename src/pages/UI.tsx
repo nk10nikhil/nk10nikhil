@@ -9,6 +9,8 @@ import Footer from "@/components/section/Footer";
 import AnimatedDice from "@/components/uilibrary/AnimatedDice";
 import GradientChangingText from "@/components/uilibrary/GradientChangingText";
 import AnimatedText from "@/components/uilibrary/AnimatedText";
+import ScrollNapping from "@/components/uilibrary/ScrollNaping";
+import RotatingMarquee from "@/components/uilibrary/RotatingMarquee";
 
 
 
@@ -36,6 +38,8 @@ const UI = () => {
                 <AnimatedDice />
                 <GradientChangingText />
                 <AnimatedText />
+                {/* <ScrollNapping /> */}
+                <RotatingMarquee />
 
             </div>
 

@@ -7,6 +7,7 @@ import { ThreeDMarqueeDemo } from "@/components/uilibrary/ThreeDMarqueeDemo";
 import Navbar from "@/components/section/Navbar";
 import Footer from "@/components/section/Footer";
 import AnimatedDice from "@/components/uilibrary/AnimatedDice";
+import GradientChangingText from "@/components/uilibrary/GradientChangingText";
 
 
 
@@ -32,6 +33,7 @@ const UI = () => {
             <div className="flex flex-col items-center justify-center my-10 md:my-20 space-y-40">
                 <ThreeDMarqueeDemo />
                 <AnimatedDice />
+                <GradientChangingText />
 
             </div>
 

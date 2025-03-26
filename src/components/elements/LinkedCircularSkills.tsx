@@ -14,7 +14,7 @@ function LinkedCircularSkills() {
     ];
 
     return (
-        <div className=" bg-[#13111C]/80 flex flex-col items-center justify-center p-4 relative overflow-hidden py-16 pb-24">
+        <div className=" bg-black/20 flex flex-col items-center justify-center p-4 relative overflow-hidden py-16 pb-24">
             {/* Main Text */}
             <div className="text-center mb-16 z-10">
                 <h1 className="text-white text-3xl md:text-4xl mb-4">

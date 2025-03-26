@@ -48,7 +48,7 @@ const ScrollableSection = ({ className }: ScrollableSectionProps) => {
 
     return (
         <div className={`min-h-screen bg-white text-gray-900 dark:bg-gray-900/10 dark:text-white ${className || ""}`}>
-            <div className="container mx-auto max-w-7xl px-4 pb-20 md:pb-32 pt-5">
+            <div className="container mx-auto max-w-7xl px-4 pt-5">
                 <div className="flex flex-col lg:flex-row">
                     {/* Left - Sections */}
                     <div ref={containerRef} className="w-full lg:w-1/2 lg:pr-8">
@@ -81,9 +81,6 @@ const ScrollableSection = ({ className }: ScrollableSectionProps) => {
                     </div>
                 </div>
             </div>
-
-            {/* Ensure user can scroll past the last section */}
-            <div className="h-32" />
         </div>
     );
 };

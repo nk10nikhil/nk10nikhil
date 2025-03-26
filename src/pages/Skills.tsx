@@ -15,6 +15,7 @@ import BackgroundHero from "@/components/section/BackgrounHero";
 import { CheckCircle2 } from "lucide-react";
 import ScrollingSections from "@/components/section/ScrollableSection";
 import LogoScroll from "@/components/elements/LogoScroll";
+import { MarqueeDemo } from "@/components/elements/MarqueeDemo";
 
 
 const Skills = () => {
@@ -37,7 +38,7 @@ const Skills = () => {
 
             {/* Content */}
             <Navbar />
-            <main className="pb-20 md:pb-28">
+            <main className="pb-10">
                 <section className="container mx-0 px-0 md:px-0 mb-0 pb-0">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -53,7 +54,7 @@ const Skills = () => {
                         <div className="relative">
                             <div className="absolute -inset-1 rounded-xl bg-black/50 blur-xl opacity-70"></div>
                             <div className="relative glass-card rounded-xl p-10 backdrop-blur-xl">
-                                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Why Choose Me?</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300">Why Choose Me?</h2>
                                 <p className="text-white/80 text-lg  leading-relaxed">
                                     We blend technical expertise with strategic thinking to deliver solutions that drive real business value. Our approach is collaborative, transparent, and focused on long-term success.
                                 </p>
@@ -117,7 +118,7 @@ const Skills = () => {
                         </section>
 
                         {/* {Testimonials} */}
-                        <section className="container mx-auto py-16 relative">
+                        <section className="container mx-auto pt-8 relative">
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
                             <div className="text-center mb-12">
                                 <div className="inline-flex items-center gap-2 bg-purple-900/30 rounded-full px-4 py-1 mb-6 border border-purple-700/30">
@@ -125,33 +126,7 @@ const Skills = () => {
                                 </div>
                                 <h2 className="text-3xl md:text-4xl font-bold mb-6">What my customers say</h2>
                             </div>
-                            <div className="flex mx-auto items-center justify-center gap-6 max-w-3xl">
-                                {[1].map((i) => (
-                                    <div
-                                        key={i}
-                                        className="bg-gradient-to-br from-purple-900/40 to-purple-800/10 p-6 rounded-xl border border-purple-700/30 shadow-[0_0_30px_rgba(139,92,246,0.1)]"
-                                    >
-                                        <div className="flex items-center gap-0.5 mb-4">
-                                            {[1, 2, 3, 4, 5].map((star) => (
-                                                <div key={star} className="text-yellow-400">
-                                                    ★
-                                                </div>
-                                            ))}
-                                        </div>
-                                        <p className="text-gray-300 mb-6 text-left">
-                                            "Nikhil has completely transformed how we build websites. The AI-powered tools save us hours of work,
-                                            and the templates are beautiful and customizable."
-                                        </p>
-                                        <div className="flex items-left gap-3">
-                                            <div className="h-10 w-10 rounded-full bg-purple-600/30"></div>
-                                            <div>
-                                                <p className="font-medium text-left">Sahil Sharma</p>
-                                                <p className="text-sm text-gray-400">Marketing Director</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+                            <MarqueeDemo />
                         </section>
 
                     </motion.div>

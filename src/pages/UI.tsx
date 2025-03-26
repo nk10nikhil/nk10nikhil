@@ -39,6 +39,7 @@ const UI = () => {
                 {/* <AnimatedText /> */}
                 {/* <RotatingMarquee /> */}
 
+
             </div>
 
 

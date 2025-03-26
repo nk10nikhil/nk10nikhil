@@ -92,7 +92,7 @@ export default function BackgroundHero({
     }
 
     return (
-        <div className="relative h-auto py-16 w-full flex items-center justify-center overflow-hidden bg-[#030303]">
+        <div className="relative h-auto py-16 w-full flex items-center justify-center overflow-hidden bg-[#030303]/10">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
             <div className="absolute inset-0 overflow-hidden">
@@ -174,6 +174,18 @@ export default function BackgroundHero({
                             Crafting exceptional digital experiences through innovative design and cutting-edge technology.
                         </p>
                     </motion.div>
+                    <section className="container mx-auto mt-4 relative">
+                        <div className="text-center">
+                            <p className="text-sm text-gray-400 pb-5">Trusted by businesses of all sizes worldwide.</p>
+                            <div className="grid grid-cols-3 md:grid-cols-6 gap-8 opacity-60 max-w-4xl mx-auto">
+                                {["Dropbox", "Shopify", "Webflow", "Stripe", "Zoom", "Discord"].map((brand) => (
+                                    <div key={brand} className="text-gray-400 text-sm font-medium">
+                                        {brand}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
 

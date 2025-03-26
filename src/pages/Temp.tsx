@@ -3,7 +3,7 @@ import P5Background from "@/components/elements/P5Background";
 import BlurBackground from "@/components/elements/BlurBackground";
 import FloatingObjects from "@/components/elements/FloatingObjects";
 import { ThemeProvider } from "@/components/elements/ThemeProvider";
-import { ThreeDMarqueeDemo } from "@/components/uilibrary/ThreeDMarqueeDemo";
+import { ThreeDMarqueeDemo } from "@/components/elements/ThreeDMarqueeDemo";
 
 const Temp = () => {
 

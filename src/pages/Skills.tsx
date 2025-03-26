@@ -11,7 +11,7 @@ import { OrbitingCirclesDemo } from "@/components/elements/OrbitingCirclesDemo";
 import ParallaxScroll from "@/components/elements/ParallaxScroll";
 import TechStack from "@/components/section/TechStack";
 import LinkedCircularSkills from "@/components/elements/LinkedCircularSkills";
-import BackgroundHero from "@/components/uilibrary/BackgrounHero";
+import BackgroundHero from "@/components/section/BackgrounHero";
 import { CheckCircle2 } from "lucide-react";
 
 

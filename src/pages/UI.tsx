@@ -3,13 +3,13 @@ import P5Background from "@/components/elements/P5Background";
 import BlurBackground from "@/components/elements/BlurBackground";
 import FloatingObjects from "@/components/elements/FloatingObjects";
 import { ThemeProvider } from "@/components/elements/ThemeProvider";
-import { ThreeDMarqueeDemo } from "@/components/uilibrary/ThreeDMarqueeDemo";
+import { ThreeDMarqueeDemo } from "@/components/elements/ThreeDMarqueeDemo";
 import Navbar from "@/components/section/Navbar";
 import Footer from "@/components/section/Footer";
-import AnimatedDice from "@/components/uilibrary/AnimatedDice";
-import GradientChangingText from "@/components/uilibrary/GradientChangingText";
-import AnimatedText from "@/components/uilibrary/AnimatedText";
-import RotatingMarquee from "@/components/uilibrary/RotatingMarquee";
+import AnimatedDice from "@/components/universeio/AnimatedDice";
+import GradientChangingText from "@/components/universeio/GradientChangingText";
+import AnimatedText from "@/components/universeio/AnimatedText";
+import RotatingMarquee from "@/components/universeio/RotatingMarquee";
 
 
 

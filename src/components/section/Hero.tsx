@@ -4,8 +4,37 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingTeddy from "../elements/FloatingTeddy";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [loaded, setLoaded] = useState(false);
+  const [count, setCount] = useState(0);
+  const targetCount = 30;
+
+  useEffect(() => {
+    // Simulating content load
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!loaded) return;
+
+    // Counter animation
+    if (count < targetCount) {
+      const interval = setTimeout(() => {
+        setCount((prev) => {
+          const increment = Math.max(1, Math.floor((targetCount - prev) / 10));
+          return Math.min(prev + increment, targetCount);
+        });
+      }, 100);
+
+      return () => clearTimeout(interval);
+    }
+  }, [count, loaded]);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -85,7 +114,14 @@ const Hero = () => {
             className="w-full md:w-1/2 flex justify-center overflow-hidden"
           >
             <div className="flex flex-col items-center justify-center">
-              <FloatingTeddy />
+
+              <div className="my-24" />
+
+              <div className="absolute z-20 top-[650px] md:top-[200px]">
+                <FloatingTeddy />
+              </div>
+
+
               <div className="max-w-xl sm:max-w-xl md:max-w-xl relative">
                 <div className="glass-morphism rounded-xl p-2 md:p-3 backdrop-blur-xl animate-float">
                   <div className="code-window bg-card p-3 rounded-lg">

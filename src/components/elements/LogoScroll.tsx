@@ -64,7 +64,7 @@ const LogoScroll: React.FC<LogoScrollProps> = ({ className }) => {
             {companies.map((company, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center px-8 py-6 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-lg transition-all duration-300"
+                className="flex items-center justify-center px-8 py-6 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-lg transition-all duration-300 scale-75 md:scale-75 lg:scale-100"
               >
                 <span className="text-white/60 hover:text-white/90 transition-colors duration-300 font-semibold text-xl">
                   {company}

@@ -33,7 +33,7 @@ const Skills = () => {
             {/* Background Elements */}
             {/* <P5Background className="blur-sm" /> */}
             <BlurBackground />
-            <FloatingObjects />
+            {/* <FloatingObjects /> */}
 
             {/* Content */}
             <Navbar />
@@ -45,11 +45,25 @@ const Skills = () => {
                         transition={{ duration: 0.5 }}
                         className="text-center"
                     >
+
                         <BackgroundHero />
+
                         <LogoScroll />
-                        {/* <ScrollingSections /> */}
+
+                        <div className="relative">
+                            <div className="absolute -inset-1 rounded-xl bg-black/50 blur-xl opacity-70"></div>
+                            <div className="relative glass-card rounded-xl p-10 backdrop-blur-xl">
+                                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Why Choose Me?</h2>
+                                <p className="text-white/80 text-lg  leading-relaxed">
+                                    We blend technical expertise with strategic thinking to deliver solutions that drive real business value. Our approach is collaborative, transparent, and focused on long-term success.
+                                </p>
+                                <ScrollingSections />
+                            </div>
+                        </div>
+
+
                         {/* Api Integration */}
-                        {/* <section className="container mx-auto py-16 relative">
+                        <section className="container mx-auto py-16 relative">
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
                             <div className="flex flex-col md:flex-row gap-8 items-center">
                                 <div className="md:w-1/2">
@@ -100,10 +114,10 @@ const Skills = () => {
                                     </div>
                                 </div>
                             </div>
-                        </section> */}
+                        </section>
 
                         {/* {Testimonials} */}
-                        {/* <section className="container mx-auto py-16 relative">
+                        <section className="container mx-auto py-16 relative">
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
                             <div className="text-center mb-12">
                                 <div className="inline-flex items-center gap-2 bg-purple-900/30 rounded-full px-4 py-1 mb-6 border border-purple-700/30">
@@ -138,7 +152,7 @@ const Skills = () => {
                                     </div>
                                 ))}
                             </div>
-                        </section> */}
+                        </section>
 
                     </motion.div>
                 </section>

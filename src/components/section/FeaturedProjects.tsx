@@ -90,7 +90,7 @@ const FeaturedProjects = () => {
           className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16"
         >
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">Featured Projects</h2>
             <p className="text-lg text-muted-foreground max-w-xl">
               A collection of my full stack projects demonstrating my skills in both front-end and back-end development.
             </p>

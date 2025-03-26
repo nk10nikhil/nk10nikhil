@@ -68,7 +68,7 @@ const ContactSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             Have a project in mind or want to discuss opportunities? Reach out!
           </p>

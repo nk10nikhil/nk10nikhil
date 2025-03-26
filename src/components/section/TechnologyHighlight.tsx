@@ -15,7 +15,7 @@ const TechnologyHighlight = () => {
             transition={{ duration: 0.5 }}
             className="text-left"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Problem Solving
             </h2>
             <p className="text-muted-foreground text-lg">

@@ -40,7 +40,7 @@ const Services = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">Services</h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             I offer a wide range of services to help you build your digital products and grow your
             business. From frontend development to full-stack solutions, I've got you covered.

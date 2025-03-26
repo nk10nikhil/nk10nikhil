@@ -364,10 +364,6 @@ html {
     @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-lg;
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent;
-  }
-
   .animation-delay-100 {
     animation-delay: 100ms;
   }

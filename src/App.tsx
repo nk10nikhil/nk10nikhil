@@ -13,7 +13,6 @@ import NotFound from "./pages/NotFound";
 import Skills from "./pages/Skills";
 import Temp from "./pages/Temp";
 import BackToTopButton from "./components/elements/BackToTopButton";
-import UI from "./pages/UI";
 
 const queryClient = new QueryClient();
 
@@ -33,7 +32,6 @@ const App = () => (
             <Route path="/skills" element={<Skills />} />
             <Route path="/*" element={<NotFound />} />
             <Route path="/temp" element={<Temp />} />
-            <Route path="/ui" element={<UI />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

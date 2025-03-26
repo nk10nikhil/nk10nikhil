@@ -31,11 +31,10 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", path: "/" },
-    { name: "Skills", path: "/skills" },
+    { name: "Services", path: "/skills" },
     { name: "Projects", path: "/projects" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "UI", path: "/ui" },
   ];
 
   return (

@@ -15,6 +15,7 @@ import TechnologyHighlight from "@/components/section/TechnologyHighlight";
 import ToolbarHighlight from "@/components/section/ToolbarHighlight";
 import SkillsSection from "@/components/section/SkillsSection";
 import P5Background from "@/components/elements/P5Background";
+import TechSkills from "@/components/section/TechSkills";
 
 const Index = () => {
   useEffect(() => {
@@ -43,8 +44,9 @@ const Index = () => {
         <FeaturedProjects />
         <Services />
         <ToolbarHighlight />
-        <CodeSnippet />
         <TechnologyHighlight />
+        <CodeSnippet />
+        <TechSkills />
         <ContactSection />
       </main>
       <Footer />

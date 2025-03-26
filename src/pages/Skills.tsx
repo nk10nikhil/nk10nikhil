@@ -13,6 +13,8 @@ import TechStack from "@/components/section/TechStack";
 import LinkedCircularSkills from "@/components/elements/LinkedCircularSkills";
 import BackgroundHero from "@/components/section/BackgrounHero";
 import { CheckCircle2 } from "lucide-react";
+import ScrollingSections from "@/components/section/ScrollableSection";
+import LogoScroll from "@/components/elements/LogoScroll";
 
 
 const Skills = () => {
@@ -35,41 +37,26 @@ const Skills = () => {
 
             {/* Content */}
             <Navbar />
-            <main className="py-20 md:py-28">
-                <section className="container mx-auto px-4 md:px-6 mb-0 pb-0">
+            <main className="pb-20 md:pb-28">
+                <section className="container mx-0 px-0 md:px-0 mb-0 pb-0">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         className="text-center"
                     >
-                        <div className="flex flex-col items-center justify-center bg-black/10 bg-opacity-10 rounded-lg p-4">
-                            <h1 className="text-4xl md:text-5xl font-bold heading-gradient">My Skills</h1>
-                            <div className="flex flex-row items-center justify-center space-x-4">
-                                <div className="flex items-center justify-center pt-5">
-                                    <OrbitingCirclesDemo />
-                                </div>
-                                <div className="flex flex-col items-center justify-center">
-
-                                    <p className="text-lg text-muted-foreground max-w-3xl hidden md:block">
-                                        I have developed a wide range of skills in web development and software engineering. From designing user-friendly interfaces to building scalable backend systems, I focus on creating efficient digital solutions. Below is an overview of the technologies and tools I have mastered.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
                         <BackgroundHero />
-                        <LinkedCircularSkills />
-
+                        <LogoScroll />
+                        {/* <ScrollingSections /> */}
                         {/* Api Integration */}
-                        <section className="container mx-auto py-16 relative">
+                        {/* <section className="container mx-auto py-16 relative">
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
                             <div className="flex flex-col md:flex-row gap-8 items-center">
                                 <div className="md:w-1/2">
                                     <div className="relative mx-auto max-w-md rounded-xl overflow-hidden border border-purple-700/30 shadow-[0_0_50px_rgba(139,92,246,0.3)]">
                                         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-purple-600/20 pointer-events-none"></div>
                                         <img
-                                            src="/projects/api4.png"
+                                            src="/sections/api4.png"
                                             width={400}
                                             height={400}
                                             alt="API Integrations"
@@ -113,10 +100,10 @@ const Skills = () => {
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </section> */}
 
                         {/* {Testimonials} */}
-                        <section className="container mx-auto py-16 relative">
+                        {/* <section className="container mx-auto py-16 relative">
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
                             <div className="text-center mb-12">
                                 <div className="inline-flex items-center gap-2 bg-purple-900/30 rounded-full px-4 py-1 mb-6 border border-purple-700/30">
@@ -151,7 +138,7 @@ const Skills = () => {
                                     </div>
                                 ))}
                             </div>
-                        </section>
+                        </section> */}
 
                     </motion.div>
                 </section>

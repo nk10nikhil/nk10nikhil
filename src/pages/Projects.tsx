@@ -170,7 +170,7 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12 md:mb-16"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 heading-gradient">My Projects</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">My Projects</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto pb-5">
               Here are some of the projects I've worked on recently. You can view the live demos and source code on GitHub.
             </p>

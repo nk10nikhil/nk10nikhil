@@ -5,7 +5,7 @@ import { OrbitingCirclesDemo } from "@/components/elements/OrbitingCirclesDemo";
 
 const TechSkills = () => {
     return (
-        <section className="pt-16 md:pt-24">
+        <section className="pt-1 md:pt-2">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 

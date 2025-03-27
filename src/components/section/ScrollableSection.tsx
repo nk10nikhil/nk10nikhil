@@ -62,7 +62,7 @@ const ScrollableSection = ({ className }: ScrollableSectionProps) => {
                     </div>
 
                     {/* Right - Images */}
-                    <div className="hidden lg:flex lg:w-1/2 sticky top-32 h-[500px]">
+                    <div className="hidden lg:flex lg:w-1/2 sticky top-32 h-[600px]">
                         <div ref={imagesRef} className="image-container w-full floating-animation">
                             {sections.map((section, index) => (
                                 <div

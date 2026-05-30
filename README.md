@@ -1,6 +1,6 @@
 <!-- Heading -->
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=45&duration=2000&pause=2000&color=00F0FF&center=true&vCenter=true&width=1200&lines=Hi+there,+I'm+Nikhil+Kumar+👋;GATE+CSIT+2027+Qualified;Full-Stack+Software+Engineer;Building+Scalable+%26+Impactful+Solutions;AI%2FML+%26+Cloud+Enthusiast; LeetCode Guardian (Top 1%)" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=45&duration=2000&pause=2000&color=00F0FF&center=true&vCenter=true&width=1200&lines=Hi+there,+I'm+Nikhil+Kumar+👋;GATE+CSIT+2027+Qualified;Full-Stack+Software+Engineer;Building+Scalable+%26+Impactful+Solutions;AI%2FML+%26+Cloud+Enthusiast;LeetCode+Guardian+(Top+1%)" alt="Typing SVG" />
   <p align="center">
     <a href="https://www.nk10nikhil.dev/"><img src="https://img.shields.io/badge/Portfolio-%23FF5722.svg?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"></a>
     <a href="https://www.linkedin.com/in/nk10nikhil/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -10,8 +10,8 @@
   </p>
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=nk10nikhil&label=👁️+PROFILE+VIEWS&color=0e75b6&style=flat-square" alt="views" />
-    <img src="https://img.shields.io/github/followers/nk10nikhil?label= FOLLOWERS&style=flat-square&color=blue" alt="GitHub Followers">
-    <img src="https://img.shields.io/github/stars/nk10nikhil?label= STARS&style=flat-square&color=yellow" alt="GitHub Stars">
+    <img src="https://img.shields.io/github/followers/nk10nikhil?label=FOLLOWERS&style=flat-square&color=blue" alt="GitHub Followers">
+    <img src="https://img.shields.io/github/stars/nk10nikhil?label=STARS&style=flat-square&color=yellow" alt="GitHub Stars">
     <img src="https://img.shields.io/badge/🏆LEETCODE-GUARDIAN-FFA116?style=flat-square" alt="guardian" />
   </p>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">

@@ -6,10 +6,10 @@ import React, {
   useState,
 } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { Button } from '../ui/button';
+import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ScrollProgress } from '../elements/ScrollProgress';
+import { ScrollProgress } from "../elements/ScrollProgress";
 import { Github, Linkedin } from "../elements/BrandIcons";
 
 const NAV_TEXTS = [

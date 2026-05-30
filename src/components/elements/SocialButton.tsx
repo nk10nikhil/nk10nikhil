@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import RotateCube from './RotateCube';
+import RotateCube from "./RotateCube";
 
 const SocialButton = () => {
   return (

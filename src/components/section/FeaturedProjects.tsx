@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  ExternalLink,
-  Star,
-  Sparkles,
-} from "lucide-react";
+import { ArrowUpRight, ExternalLink, Star, Sparkles } from "lucide-react";
 import { Github } from "../elements/BrandIcons";
 import { Link } from "react-router-dom";
-import { Button } from '../ui/button';
-import CardSwap, { Card } from '../ui/card-swap';
-import { useInView } from '../../hooks/useInView';
-import { useRuntimeProfile } from '../../hooks/useRuntimeProfile';
+import { Button } from "../ui/button";
+import CardSwap, { Card } from "../ui/card-swap";
+import { useInView } from "../../hooks/useInView";
+import { useRuntimeProfile } from "../../hooks/useRuntimeProfile";
 
 const projects = [
   {

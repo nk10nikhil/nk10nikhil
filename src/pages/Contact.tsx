@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import ContactSection from '../components/section/ContactSection';
-import BlurBackground from '../components/section/BlurBackground';
-import FloatingObjects from '../components/elements/FloatingObjects';
-import SocialButton from '../components/elements/SocialButton';
+import ContactSection from "../components/section/ContactSection";
+import BlurBackground from "../components/section/BlurBackground";
+import FloatingObjects from "../components/elements/FloatingObjects";
+import SocialButton from "../components/elements/SocialButton";
 import { CheckCircle } from "lucide-react";
 
 const BenefitsList = () => {

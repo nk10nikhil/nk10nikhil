@@ -1,4 +1,4 @@
-import CircularProfile from '../elements/CircularProfile';
+import CircularProfile from "../elements/CircularProfile";
 import { Mail } from "lucide-react";
 import { Github, Twitter, Linkedin } from "../elements/BrandIcons";
 import { Link } from "react-router-dom";

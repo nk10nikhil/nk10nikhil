@@ -7,10 +7,10 @@ import {
   type RefObject,
 } from "react";
 import { motion } from "framer-motion";
-import Hero from '../components/section/Hero';
-import BlurBackground from '../components/section/BlurBackground';
-import FloatingObjects from '../components/elements/FloatingObjects';
-import { useInView } from '../hooks/useInView';
+import Hero from "../components/section/Hero";
+import BlurBackground from "../components/section/BlurBackground";
+import FloatingObjects from "../components/elements/FloatingObjects";
+import { useInView } from "../hooks/useInView";
 
 const TechStack = lazy(() => import("../components/section/TechStack"));
 const FeaturedProjects = lazy(

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec3 } from "ogl";
-import { useRuntimeProfile } from '../../hooks/useRuntimeProfile';
+import { useRuntimeProfile } from "../../hooks/useRuntimeProfile";
 
 interface OrbProps {
   hue?: number;

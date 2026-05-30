@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Square, Hexagon, Triangle, Star, Circle } from "lucide-react";
-import Particles from './Particles';
+import Particles from "./Particles";
 
 // Move outside component - create ONCE, not on every render
 const FLOATING_ITEMS = [

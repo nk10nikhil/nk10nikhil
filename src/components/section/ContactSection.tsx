@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Textarea } from '../ui/textarea';
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
 import { Send, Mail, Phone, MapPin } from "lucide-react";
-import SocialLinkBar from '../elements/SocialLinkBar';
+import SocialLinkBar from "../elements/SocialLinkBar";
 import { useRef } from "react";
 import { useState } from "react";
-import { useToast } from '../../hooks/use-toast';
+import { useToast } from "../../hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();

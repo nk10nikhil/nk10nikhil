@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import HoverCard from "@/components/elements/HoverCard";
+import HoverCard from '../elements/HoverCard';
 
 const TechnologyHighlight = () => {
   return (

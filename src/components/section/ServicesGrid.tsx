@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Zap } from "lucide-react";
-import ProductivitySlider from "@/components/elements/ProductivitySlider";
+import ProductivitySlider from '../elements/ProductivitySlider';
 import { useInView } from "react-intersection-observer";
 
 export default function ServicesGrid() {

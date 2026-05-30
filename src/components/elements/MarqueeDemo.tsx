@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import { Marquee } from "@/components/elements/Marquee";
+import { cn } from '../../lib/utils';
+import { Marquee } from './Marquee';
 
 const reviews = [
   {

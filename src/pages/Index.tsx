@@ -7,27 +7,27 @@ import {
   type RefObject,
 } from "react";
 import { motion } from "framer-motion";
-import Hero from "@/components/section/Hero";
-import BlurBackground from "@/components/section/BlurBackground";
-import FloatingObjects from "@/components/elements/FloatingObjects";
-import { useInView } from "@/hooks/useInView";
+import Hero from '../components/section/Hero';
+import BlurBackground from '../components/section/BlurBackground';
+import FloatingObjects from '../components/elements/FloatingObjects';
+import { useInView } from '../hooks/useInView';
 
-const TechStack = lazy(() => import("@/components/section/TechStack"));
+const TechStack = lazy(() => import("../components/section/TechStack"));
 const FeaturedProjects = lazy(
-  () => import("@/components/section/FeaturedProjects"),
+  () => import("../components/section/FeaturedProjects"),
 );
-const Certification = lazy(() => import("@/components/section/Certification"));
-const SkillsSection = lazy(() => import("@/components/section/SkillsSection"));
-const Services = lazy(() => import("@/components/section/Services"));
+const Certification = lazy(() => import("../components/section/Certification"));
+const SkillsSection = lazy(() => import("../components/section/SkillsSection"));
+const Services = lazy(() => import("../components/section/Services"));
 const ToolbarHighlight = lazy(
-  () => import("@/components/section/ToolbarHighlight"),
+  () => import("../components/section/ToolbarHighlight"),
 );
 const TechnologyHighlight = lazy(
-  () => import("@/components/section/TechnologyHighlight"),
+  () => import("../components/section/TechnologyHighlight"),
 );
-const TechSkills = lazy(() => import("@/components/section/TechSkills"));
+const TechSkills = lazy(() => import("../components/section/TechSkills"));
 const ContactSection = lazy(
-  () => import("@/components/section/ContactSection"),
+  () => import("../components/section/ContactSection"),
 );
 
 type DeferredSectionProps = {

@@ -10,7 +10,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { useInView } from "@/hooks/useInView";
+import { useInView } from '../../hooks/useInView';
 
 const skillsData = [
   {

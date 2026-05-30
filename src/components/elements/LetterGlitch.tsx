@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { useRuntimeProfile } from "@/hooks/useRuntimeProfile";
+import { useRuntimeProfile } from '../../hooks/useRuntimeProfile';
 
 const LetterGlitch = ({
   glitchColors = ["#2b4539", "#61dca3", "#61b3dc"],

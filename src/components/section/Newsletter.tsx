@@ -7,11 +7,11 @@ import {
   type RefObject,
 } from "react";
 import { Send, Mail, Globe } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
-import { useInView } from "@/hooks/useInView";
-import { useRuntimeProfile } from "@/hooks/useRuntimeProfile";
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { useToast } from '../../hooks/use-toast';
+import { useInView } from '../../hooks/useInView';
+import { useRuntimeProfile } from '../../hooks/useRuntimeProfile';
 
 type GlobePoint = {
   lat: number;

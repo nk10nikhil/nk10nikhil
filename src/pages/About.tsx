@@ -1,8 +1,8 @@
 import { useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
 import {
   Download,
   Briefcase,
@@ -13,8 +13,6 @@ import {
   Clock,
   BadgeCheck,
   Rocket,
-  Github,
-  Linkedin,
   Award,
   Mail,
   MapPin,
@@ -28,11 +26,12 @@ import {
   Zap,
   Globe,
 } from "lucide-react";
-import BlurBackground from "@/components/section/BlurBackground";
-import FloatingObjects from "@/components/elements/FloatingObjects";
-import { cn } from "@/lib/utils";
-import Certification from "@/components/section/Certification";
-import { useRuntimeProfile } from "@/hooks/useRuntimeProfile";
+import { Github, Linkedin } from "../components/elements/BrandIcons";
+import BlurBackground from '../components/section/BlurBackground';
+import FloatingObjects from '../components/elements/FloatingObjects';
+import { cn } from '../lib/utils';
+import Certification from '../components/section/Certification';
+import { useRuntimeProfile } from '../hooks/useRuntimeProfile';
 
 const viewportConfig = {
   triggerOnce: true,

@@ -1,4 +1,4 @@
-import CircularText from "@/components/elements/CircularText";
+import CircularText from './CircularText';
 
 const CircularProfile = () => {
   return (

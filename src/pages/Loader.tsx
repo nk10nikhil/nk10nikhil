@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Orb from "@/components/elements/Orb";
-import LetterGlitch from "@/components/elements/LetterGlitch";
+import Orb from '../components/elements/Orb';
+import LetterGlitch from '../components/elements/LetterGlitch';
 
 interface LoaderProps {
   isLoading: boolean;

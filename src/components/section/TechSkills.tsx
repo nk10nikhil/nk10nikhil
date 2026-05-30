@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { OrbitingCirclesDemo } from "@/components/elements/OrbitingCirclesDemo";
+import { OrbitingCirclesDemo } from '../elements/OrbitingCirclesDemo';
 
 const TechSkills = () => {
   return (

@@ -1,9 +1,9 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as Sonner } from "./components/ui/sonner";
+import { TooltipProvider } from "./components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "@/components/elements/ThemeProvider";
+import { ThemeProvider } from "./components/elements/ThemeProvider";
 import {
   useState,
   useEffect,
@@ -12,21 +12,21 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import BackToTopButton from "@/components/elements/BackToTopButton";
-import Loader from "@/pages/Loader";
-import Navbar from "@/components/section/Navbar";
-import Footer from "@/components/section/Footer";
-import { useRuntimeProfile } from "@/hooks/useRuntimeProfile";
+import BackToTopButton from "./components/elements/BackToTopButton";
+import Loader from "./pages/Loader";
+import Navbar from "./components/section/Navbar";
+import Footer from "./components/section/Footer";
+import { useRuntimeProfile } from "./hooks/useRuntimeProfile";
 
 // Eager load the main page for instant access
-import Index from "@/pages/Index";
+import Index from "./pages/Index";
 
 // Lazy load secondary pages (loaded after initial render)
-const Projects = lazy(() => import("@/pages/Projects"));
-const About = lazy(() => import("@/pages/About"));
-const Contact = lazy(() => import("@/pages/Contact"));
-const Services = lazy(() => import("@/pages/Services"));
-const NotFound = lazy(() => import("@/pages/NotFound"));
+const Projects = lazy(() => import("./pages/Projects"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Services = lazy(() => import("./pages/Services"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -346,14 +346,14 @@ const AppContent = () => {
 
     const id = schedule(() => {
       // Prefetch only likely next routes after initial paint.
-      void import("@/pages/Projects");
-      void import("@/pages/About");
+      void import("./pages/Projects");
+      void import("./pages/About");
     });
 
     const prefetchRemainingRoutes = () => {
-      void import("@/pages/Contact");
-      void import("@/pages/Services");
-      void import("@/pages/NotFound");
+      void import("./pages/Contact");
+      void import("./pages/Services");
+      void import("./pages/NotFound");
       window.removeEventListener("pointerdown", prefetchRemainingRoutes);
       window.removeEventListener("keydown", prefetchRemainingRoutes);
     };

@@ -9,11 +9,12 @@ import {
   useCallback,
 } from "react";
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
-import BlurBackground from "@/components/section/BlurBackground";
-import FloatingObjects from "@/components/elements/FloatingObjects";
-import StarOnGithubButton from "@/components/elements/StarOnGithubButton";
-import { cn } from "@/lib/utils";
+import { ExternalLink } from "lucide-react";
+import { Github } from "../components/elements/BrandIcons";
+import BlurBackground from "../components/section/BlurBackground";
+import FloatingObjects from "../components/elements/FloatingObjects";
+import StarOnGithubButton from "../components/elements/StarOnGithubButton";
+import { cn } from "../lib/utils";
 import React from "react";
 
 // Three.js integration for enhanced visuals

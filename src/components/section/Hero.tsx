@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '../ui/button';
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
-import FloatingTeddy from "@/components/elements/FloatingTeddy";
+import FloatingTeddy from '../elements/FloatingTeddy';
 import { useEffect, useState, useMemo, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

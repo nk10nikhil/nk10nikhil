@@ -260,7 +260,7 @@ const useMouseEnter = () => {
 // Enhanced Project Data with more details
 const projects = [
   {
-    id: 11,
+    id: 1,
     title: "E-commerce Platform with Secure Payments",
     description:
       "Built a full-stack e-commerce platform that can process 6,000+ transactions with Razorpay integration & JWT",
@@ -278,12 +278,12 @@ const projects = [
     ],
     image: "/projects/project18.avif",
     demoLink: "https://myprojectbazaar.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/myprojectbazaar",
+    githubLink: "https://github.com/nk10nikhil/project-bazaar",
     featured: true,
     category: "Full Stack",
   },
   {
-    id: 12,
+    id: 2,
     title: "QR-Based Ticketing System",
     description:
       "Built under SIH hackathon for 3,000+ attendees, secure QR check-ins, REST APIs, real-time dashboards.",
@@ -292,12 +292,12 @@ const projects = [
     tags: ["React", "Next.js", "Node.js", "Express", "MongoDB", "JWT"],
     image: "/projects/project8.avif",
     demoLink: "https://myeventorg.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/myeventorg",
+    githubLink: "https://github.com/nk10nikhil/qr-ticketing-system",
     featured: true,
     category: "Full Stack",
   },
   {
-    id: 13,
+    id: 3,
     title: "Predictive Analytics Dashboard",
     description:
       "Built an AI dashboard using React, Flask & Scikit-learn for 87% model accuracy on 1,500+ entries.",
@@ -306,12 +306,12 @@ const projects = [
     tags: ["React", "Flask", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
     image: "/projects/project12.avif",
     demoLink: "https://mycollegeorg.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/mycollegeorg",
+    githubLink: "https://github.com/nk10nikhil/college-lms",
     featured: false,
     category: "AI/ML",
   },
   {
-    id: 14,
+    id: 4,
     title: "Real-Time Chat Application",
     description:
       "Secure chat app for 2,500+ users with WebSockets, JWT encryption, Framer Motion animations.",
@@ -328,12 +328,12 @@ const projects = [
     ],
     image: "/projects/project13.avif",
     demoLink: "https://networkup.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/networkup",
+    githubLink: "https://github.com/nk10nikhil/networkup-chatapp",
     featured: false,
     category: "Full Stack",
   },
   {
-    id: 15,
+    id: 5,
     title: "Glamour Grid – Salon Branding Website",
     description:
       "A modern accessible branding website for salons built with Next.js & Tailwind.",
@@ -342,12 +342,12 @@ const projects = [
     tags: ["Next.js", "Tailwind CSS", "React", "WCAG", "ARIA"],
     image: "/projects/project9.avif",
     demoLink: "https://glamourgrid.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/glamourgrid",
+    githubLink: "https://github.com/nk10nikhil/glamour-grid",
     featured: false,
     category: "Frontend",
   },
   {
-    id: 16,
+    id: 6,
     title: "Our Restaurant – Booking & Branding Web App",
     description:
       "Responsive restaurant web app with real-time booking and Google Maps integration.",
@@ -356,12 +356,12 @@ const projects = [
     tags: ["React", "JavaScript", "CSS", "Google Maps API"],
     image: "/projects/project7.avif",
     demoLink: "https://restaurantworld.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/restaurantworld",
+    githubLink: "https://github.com/nk10nikhil/restaurant-world",
     featured: true,
     category: "Frontend",
   },
   {
-    id: 17,
+    id: 7,
     title: "Everyday Life – E-Commerce Website",
     description:
       "Sleek responsive e-commerce site for household items, optimized for performance.",
@@ -370,12 +370,12 @@ const projects = [
     tags: ["React", "JavaScript", "CSS", "Webpack", "Lighthouse"],
     image: "/projects/project19.avif",
     demoLink: "https://everydaylife.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/everydaylife",
+    githubLink: "https://github.com/nk10nikhil/everydaylife-ecommerce",
     featured: true,
     category: "Frontend",
   },
   {
-    id: 18,
+    id: 8,
     title: "WeBuilt_U – Agency Website",
     description:
       "Official site for WeBuilt_U, designed with Tailwind, Framer Motion & Vite.",
@@ -384,12 +384,12 @@ const projects = [
     tags: ["React", "Tailwind CSS", "Vite", "Framer Motion"],
     image: "/projects/project2.avif",
     demoLink: "https://webuiltu.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/webuiltu",
+    githubLink: "https://github.com/nk10nikhil/webuiltu-agency",
     featured: false,
     category: "Frontend",
   },
   {
-    id: 19,
+    id: 9,
     title: "Harbour Haven - Beverage Store",
     description:
       "A modern beverage store website built with React and Tailwind CSS, featuring a responsive design and smooth animations.",
@@ -398,12 +398,12 @@ const projects = [
     tags: ["React", "Tailwind CSS", "JavaScript", "Responsive Design"],
     image: "/projects/project17.avif",
     demoLink: "https://harborhaven.vercel.app/",
-    githubLink: "https://github.com/nk10nikhil/harbourhaven",
+    githubLink: "https://github.com/nk10nikhil/harbour-haven",
     featured: true,
     category: "Frontend",
   },
   {
-    id: 1,
+    id: 10,
     title: "Full Stack Authentication System",
     description:
       "A full stack authentication system with user registration, login, and password reset functionality. Built with Node.js, Express, React, and Tailwind CSS, using JWT and MongoDB.",
@@ -417,7 +417,7 @@ const projects = [
     category: "Full Stack",
   },
   {
-    id: 2,
+    id: 11,
     title: "Suduko Solver",
     description:
       "A web application that solves Sudoku puzzles using a backtracking algorithm.",
@@ -428,10 +428,10 @@ const projects = [
     demoLink: "https://github.com/nk10nikhil",
     githubLink: "https://github.com/nk10nikhil",
     featured: false,
-    category: "Algorithms",
+    category: "Game Development",
   },
   {
-    id: 3,
+    id: 12,
     title: "SocioPulse – Social Media Web Application (Next.js, Firebase)",
     description:
       "Built a feature-rich social media platform with user authentication, real-time chat, and media sharing capabilities.",
@@ -439,13 +439,13 @@ const projects = [
       "Built a feature-rich social media platform with user authentication, real-time chat, and media sharing capabilities using Next.js and Firebase.",
     tags: ["Next.js", "Firebase", "Real-time Chat", "Media Sharing"],
     image: "/projects/project5.avif",
-    demoLink: "https://github.com/nk10nikhil",
-    githubLink: "https://github.com/nk10nikhil",
+    demoLink: "https://github.com/nk10nikhil/social-pulse",
+    githubLink: "https://github.com/nk10nikhil/social-pulse",
     featured: false,
     category: "Full Stack",
   },
   {
-    id: 4,
+    id: 13,
     title: "WriteMyBlog – Online Blogging Platform (Next.js, PostgreSQL)",
     description:
       "Created a web application for users to write, edit, and publish blogs online, with an interactive WYSIWYG editor and SEO-friendly features.",
@@ -453,13 +453,13 @@ const projects = [
       "Created a web application for users to write, edit, and publish blogs online, with an interactive WYSIWYG editor and SEO-friendly features using Next.js and PostgreSQL.",
     tags: ["Next.js", "PostgreSQL", "WYSIWYG Editor", "SEO"],
     image: "/projects/project16.avif",
-    demoLink: "https://github.com/nk10nikhil",
-    githubLink: "https://github.com/nk10nikhil",
+    demoLink: "https://writemyblog.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/write-my-blog",
     featured: true,
     category: "Full Stack",
   },
   {
-    id: 5,
+    id: 14,
     title: "Full-Stack Q&A System (Next.js, Appwrite)",
     description:
       "Designed a Q&A platform allowing users to post questions, upvote/downvote answers, and follow topics.",
@@ -473,7 +473,7 @@ const projects = [
     category: "Full Stack",
   },
   {
-    id: 6,
+    id: 15,
     title: "AI-Powered SaaS Platform (Next.js, Prisma, Neon DB)",
     description:
       "Developed a software-as-a-service (SaaS) platform with AI-driven features, database management with Prisma, and scalable cloud deployment.",
@@ -481,13 +481,13 @@ const projects = [
       "Developed a software-as-a-service (SaaS) platform with AI-driven features, database management with Prisma, and scalable cloud deployment using Next.js, Prisma, and Neon DB.",
     tags: ["Next.js", "Prisma", "Neon DB", "AI"],
     image: "/projects/project14.avif",
-    demoLink: "https://github.com/nk10nikhil",
-    githubLink: "https://github.com/nk10nikhil",
+    demoLink: "https://github.com/nk10nikhil/cloudinary-saas",
+    githubLink: "https://github.com/nk10nikhil/cloudinary-saas",
     featured: true,
     category: "AI/ML",
   },
   {
-    id: 7,
+    id: 16,
     title: "Secure LMS with Payment Gateway (Next.js, Stripe)",
     description:
       "Built a learning management system (LMS) with secure course access, student progress tracking, and integrated payment solutions using Stripe.",
@@ -495,13 +495,13 @@ const projects = [
       "Built a learning management system (LMS) with secure course access, student progress tracking, and integrated payment solutions using Stripe and Next.js.",
     tags: ["Next.js", "Stripe", "LMS", "Payment Gateway"],
     image: "/projects/project1.avif",
-    demoLink: "https://github.com/nk10nikhil",
-    githubLink: "https://github.com/nk10nikhil",
+    demoLink: "https://github.com/nk10nikhil/college-lms",
+    githubLink: "https://github.com/nk10nikhil/college-lms",
     featured: false,
     category: "Full Stack",
   },
   {
-    id: 8,
+    id: 17,
     title: "Workout Tracking System (Python, Google Sheets API)",
     description:
       "Developed an automated workout tracker that logs fitness data to Google Sheets, enabling easy tracking and visualization of progress.",
@@ -512,10 +512,10 @@ const projects = [
     demoLink: "https://github.com/nk10nikhil",
     githubLink: "https://github.com/nk10nikhil",
     featured: false,
-    category: "Automation",
+    category: "Productivity",
   },
   {
-    id: 9,
+    id: 18,
     title: "Flight Deal Finder (Python, APIs)",
     description:
       "Developed an automated flight deal finder that scrapes and alerts users about discounted airline tickets.",
@@ -526,10 +526,10 @@ const projects = [
     demoLink: "https://github.com/nk10nikhil",
     githubLink: "https://github.com/nk10nikhil",
     featured: false,
-    category: "Automation",
+    category: "AI/ML",
   },
   {
-    id: 10,
+    id: 19,
     title: "Data Entry Job Automation (Python, Selenium)",
     description:
       "Automated repetitive data entry tasks using Python and Selenium, improving efficiency and reducing manual errors.",
@@ -540,7 +540,105 @@ const projects = [
     demoLink: "https://github.com/nk10nikhil",
     githubLink: "https://github.com/nk10nikhil",
     featured: false,
-    category: "Automation",
+    category: "AI/ML",
+  },
+  {
+    id: 20,
+    title: "3D Car Simulation Game",
+    description:
+      "A 3D car simulation game built with Three.js, featuring realistic physics and interactive environments.",
+    longDescription:
+      "An interactive 3D driving simulation built for the browser with physics-based vehicle movement and dynamic environments. Features weather systems, day cycles, optimized rendering, and a WebSocket race arena leaderboard.",
+    tags: ["Three.js", "JavaScript", "Game Development", "3D Simulation"],
+    image: "/projects/project26.avif",
+    demoLink: "https://mycarsimulator.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/car-simulator-game",
+    featured: true,
+    category: "Game Development",
+  },
+  {
+    id: 21,
+    title: "Global Watch – Real-Time World Events Dashboard",
+    description:
+      "A real-time dashboard that aggregates global news and events using Next.js, WebSockets, and various news APIs.",
+    longDescription:
+      "A real-time global intelligence dashboard for monitoring geopolitics, infrastructure, markets, and news in one interface. Powered by AI-driven summaries, interactive maps, and hundreds of live data feeds for situational awareness.",
+    tags: ["Next.js", "WebSockets", "News APIs", "Data Visualization"],
+    image: "/projects/project23.avif",
+    demoLink: "https://myglobalwatch.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/global-watch",
+    featured: true,
+    category: "Data Visualization",
+  },
+  {
+    id: 22,
+    title: "Chess Verse – Online Multiplayer Chess Game",
+    description:
+      "An online multiplayer chess game with real-time gameplay, built using React, Node.js, and WebSockets.",
+    longDescription:
+      "An online multiplayer chess game with real-time gameplay, built using React, Node.js, and WebSockets. Features include matchmaking, ELO ratings, chat, and a sleek UI for an engaging chess experience.",
+    tags: ["React", "Node.js", "WebSockets", "Game Development"],
+    image: "/projects/project22.avif",
+    demoLink: "https://mychessverse.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/chess-verse",
+    featured: false,
+    category: "Game Development",
+  },
+  {
+    id: 23,
+    title: "Budget Planner",
+    description:
+      "A personal finance management app that helps users track expenses, set budgets, and visualize spending patterns.",
+    longDescription:
+      "A personal finance management app that helps users track expenses, set budgets, and visualize spending patterns. Built with React, Node.js, and MongoDB, featuring interactive charts and secure authentication.",
+    tags: ["React", "Node.js", "MongoDB", "Personal Finance"],
+    image: "/projects/project24.avif",
+    demoLink: "https://mybudgetplan.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/budget-management",
+    featured: false,
+    category: "Productivity",
+  },
+  {
+    id: 24,
+    title: "Stock Market Tracker",
+    description:
+      "A real-time stock market tracking app that provides up-to-date information and analytics for investors.",
+    longDescription:
+      "A real-time stock market tracking app that provides up-to-date information and analytics for investors. Built with React and financial APIs, featuring interactive charts, news integration, and portfolio management.",
+    tags: ["React", "Financial APIs", "Data Visualization", "Investing"],
+    image: "/projects/project20.avif",
+    demoLink: "https:// trackmystock.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/stock-tracker",
+    featured: false,
+    category: "Productivity",
+  },
+  {
+    id: 25,
+    title: "Plot My Room – 3D Room Layout Planner",
+    description:
+      "A 3D room layout planner that allows users to design and visualize their living spaces in real-time.",
+    longDescription:
+      "A 3D room layout planner that allows users to design and visualize their living spaces in real-time. Built with React and Three.js, featuring a user-friendly interface, material customization, and export options for sharing designs.",
+    tags: ["React", "Three.js", "3D Modeling", "Interior Design"],
+    image: "/projects/project25.avif",
+    demoLink: "https:// plotmyroom.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/plot-room-design",
+    featured: false,
+    category: "Full Stack",
+  },
+  {
+    id: 26,
+    title: "To-Do List App",
+    description:
+      "A simple and elegant to-do list app with task management and organization features.",
+    longDescription:
+      "A simple and elegant to-do list app with task management and organization features. Built with React, featuring drag-and-drop functionality, due dates, and a clean UI.",
+    tags: ["React", "Task Management", "Productivity"],
+    image: "/projects/project21.avif",
+    demoLink: "https://mytodoonweb.vercel.app/",
+    githubLink: "https://github.com/nk10nikhil/todo-webapp",
+    featured: false,
+    category: "Productivity",
   },
 ];
 
@@ -557,7 +655,7 @@ export function ProjectCard({
   }, [selectedCategory]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 mt-[-40px]">
+    <div className="grid gap-x-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[-40px]">
       {filteredProjects.map((project) => (
         <CardContainer key={project.id} className="inter-var">
           {/* Desktop View */}
@@ -780,8 +878,10 @@ const CATEGORIES = [
   "All",
   "Full Stack",
   "AI/ML",
-  "Automation",
-  "Algorithms",
+  "Game Development",
+  "Data Visualization",
+  "Productivity",
+  "Frontend",
 ] as const;
 
 // Memoized category filter button
@@ -842,13 +942,11 @@ const Projects = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-8 md:mb-12"
           >
-            <div className="w-24 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 mx-auto mb-1"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
               My Projects
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto pb-5">
-              Here are some of the projects I've worked on recently. You can
-              view the live demos and source code on GitHub.
+              A showcase of my work, from full-stack applications to AI/ML projects and automation scripts. Explore my portfolio to see the breadth of my skills and creativity in action.
             </p>
             <span className="flex justify-center items-center gap-10 m-0">
               <StarOnGithubButton />

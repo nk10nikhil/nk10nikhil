@@ -16,6 +16,7 @@ import FloatingObjects from "../components/elements/FloatingObjects";
 import StarOnGithubButton from "../components/elements/StarOnGithubButton";
 import { cn } from "../lib/utils";
 import React from "react";
+import { hasRuntimeConstraints } from "../lib/browser";
 
 // Three.js integration for enhanced visuals
 const MouseEnterContext = createContext<
@@ -23,7 +24,19 @@ const MouseEnterContext = createContext<
 >(undefined);
 
 // Enhanced Card Components with 3D effects
-export const CardItem = ({
+type CardItemProps = React.HTMLAttributes<HTMLElement> & {
+  as?: React.ElementType | string;
+  children: React.ReactNode;
+  className?: string;
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+};
+
+const CardItem = ({
   as,
   children,
   className,
@@ -34,34 +47,23 @@ export const CardItem = ({
   rotateY = 0,
   rotateZ = 0,
   ...rest
-}: {
-  as?: any;
-  children: React.ReactNode;
-  className?: string;
-  translateX?: number | string;
-  translateY?: number | string;
-  translateZ?: number | string;
-  rotateX?: number | string;
-  rotateY?: number | string;
-  rotateZ?: number | string;
-  [key: string]: any;
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
+}: CardItemProps) => {
+  const ref = useRef<HTMLElement>(null);
   const [isMouseEntered] = useMouseEnter();
-  const Tag = as || "div";
+  const Tag = (as || "div") as React.ElementType;
 
-  useEffect(() => {
-    handleAnimations();
-  }, [isMouseEntered]);
-
-  const handleAnimations = () => {
+  const handleAnimations = useCallback(() => {
     if (!ref.current) return;
     if (isMouseEntered) {
       ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
     } else {
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
-  };
+  }, [isMouseEntered, rotateX, rotateY, rotateZ, translateX, translateY, translateZ]);
+
+  useEffect(() => {
+    handleAnimations();
+  }, [handleAnimations]);
 
   return (
     <Tag
@@ -74,7 +76,7 @@ export const CardItem = ({
   );
 };
 
-export const CardBody = ({
+const CardBody = ({
   children,
   className,
 }: {
@@ -93,7 +95,7 @@ export const CardBody = ({
   );
 };
 
-export const CardContainer = ({
+const CardContainer = ({
   children,
   className,
   containerClassName,
@@ -104,9 +106,15 @@ export const CardContainer = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
-  const [reducedEffects, setReducedEffects] = useState(false);
+  const [reducedEffects] = useState(() =>
+    hasRuntimeConstraints({ includeMotion: true }),
+  );
   const [isInView, setIsInView] = useState(true);
-  const [hasFinePointer, setHasFinePointer] = useState(false);
+  const [hasFinePointer, setHasFinePointer] = useState(() =>
+    typeof window === "undefined"
+      ? false
+      : window.matchMedia("(pointer: fine)").matches,
+  );
 
   const boundsRef = useRef<DOMRect | null>(null);
   const rafRef = useRef<number | null>(null);
@@ -118,27 +126,8 @@ export const CardContainer = ({
   }, []);
 
   useEffect(() => {
-    const connection = (navigator as any).connection as
-      | {
-          saveData?: boolean;
-          effectiveType?: string;
-        }
-      | undefined;
-
-    const saveData = connection?.saveData === true;
-    const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");
-    const lowCoreDevice = (navigator.hardwareConcurrency ?? 8) <= 4;
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    setReducedEffects(
-      reducedMotion || saveData || slowNetwork || lowCoreDevice,
-    );
-
     const pointerQuery = window.matchMedia("(pointer: fine)");
     const updatePointer = () => setHasFinePointer(pointerQuery.matches);
-    updatePointer();
     pointerQuery.addEventListener("change", updatePointer);
 
     return () => {
@@ -252,7 +241,7 @@ export const CardContainer = ({
 };
 
 // Create a hook to use the context
-export const useMouseEnter = () => {
+const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
   if (context === undefined) {
     throw new Error("useMouseEnter must be used within a MouseEnterProvider");

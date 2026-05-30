@@ -2,6 +2,7 @@ import React, { useMemo, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Square, Hexagon, Triangle, Star, Circle } from "lucide-react";
 import Particles from "./Particles";
+import { getNavigatorConnection } from "../../lib/browser";
 
 // Move outside component - create ONCE, not on every render
 const FLOATING_ITEMS = [
@@ -80,12 +81,7 @@ const FloatingObjects = React.memo(() => {
   useEffect(() => {
     setIsClient(true);
 
-    const connection = (navigator as any).connection as
-      | {
-          saveData?: boolean;
-          effectiveType?: string;
-        }
-      | undefined;
+    const connection = getNavigatorConnection();
 
     const saveData = connection?.saveData === true;
     const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");

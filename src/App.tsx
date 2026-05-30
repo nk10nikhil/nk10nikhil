@@ -17,6 +17,7 @@ import Loader from "./pages/Loader";
 import Navbar from "./components/section/Navbar";
 import Footer from "./components/section/Footer";
 import { useRuntimeProfile } from "./hooks/useRuntimeProfile";
+import { getNavigatorConnection } from "./lib/browser";
 
 // Eager load the main page for instant access
 import Index from "./pages/Index";
@@ -323,14 +324,7 @@ const AppContent = () => {
   const [transitionComplete, setTransitionComplete] = useState(false);
 
   useEffect(() => {
-    const connection = (
-      navigator as Navigator & {
-        connection?: {
-          saveData?: boolean;
-          effectiveType?: string;
-        };
-      }
-    ).connection;
+    const connection = getNavigatorConnection();
 
     const saveData = connection?.saveData === true;
     const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");
@@ -340,8 +334,7 @@ const AppContent = () => {
 
     const schedule =
       "requestIdleCallback" in window
-        ? (cb: () => void) =>
-            (window as any).requestIdleCallback(cb, { timeout: 2500 })
+        ? (cb: () => void) => window.requestIdleCallback(cb, { timeout: 2500 })
         : (cb: () => void) => window.setTimeout(cb, 1200);
 
     const id = schedule(() => {
@@ -370,19 +363,16 @@ const AppContent = () => {
       window.removeEventListener("pointerdown", prefetchRemainingRoutes);
       window.removeEventListener("keydown", prefetchRemainingRoutes);
 
-      const cancelIdle = (window as any).cancelIdleCallback as
-        | ((handle: any) => void)
-        | undefined;
-      if (typeof cancelIdle === "function") {
+      if ("cancelIdleCallback" in window) {
         try {
-          cancelIdle(id);
+          window.cancelIdleCallback(id);
         } catch {
           // ignore
         }
         return;
       }
 
-      clearTimeout(id as any);
+      clearTimeout(id);
     };
   }, [lowPower]);
 

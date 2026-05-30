@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ScrollProgress } from "../elements/ScrollProgress";
 import { Github, Linkedin } from "../elements/BrandIcons";
+import { hasRuntimeConstraints } from "../../lib/browser";
 
 const NAV_TEXTS = [
   "Nikhil Kumar",
@@ -34,9 +35,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState<string>(NAV_TEXTS[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [reduceRuntimeMotion, setReduceRuntimeMotion] = useState(false);
+  const [reduceRuntimeMotion] = useState(() =>
+    hasRuntimeConstraints({ includeMotion: true }),
+  );
 
   const scrolledRef = useRef(false);
   const rafRef = useRef<number | null>(null);
@@ -44,28 +47,7 @@ const Navbar = () => {
   const links = useMemo(() => NAV_LINKS, []);
 
   useEffect(() => {
-    const connection = (navigator as any).connection as
-      | {
-          saveData?: boolean;
-          effectiveType?: string;
-        }
-      | undefined;
-
-    const saveData = connection?.saveData === true;
-    const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");
-    const lowCoreDevice = (navigator.hardwareConcurrency ?? 8) <= 4;
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    setReduceRuntimeMotion(
-      reducedMotion || saveData || slowNetwork || lowCoreDevice,
-    );
-  }, []);
-
-  useEffect(() => {
     if (reduceRuntimeMotion) {
-      setDisplayText(NAV_TEXTS[0]);
       return;
     }
 
@@ -114,12 +96,12 @@ const Navbar = () => {
     };
   }, []);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
-
   const handleToggle = useCallback(() => {
     setIsOpen((prev) => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsOpen(false);
   }, []);
 
   return (
@@ -148,6 +130,7 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
+              onClick={closeMenu}
               className={`relative px-1 py-2 transition-colors hover:text-purple-500 ${
                 location.pathname === link.path
                   ? "text-gradient font-bold"
@@ -208,9 +191,10 @@ const Navbar = () => {
         >
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             {links.map((link) => (
-              <Link
+            <Link
                 key={link.path}
                 to={link.path}
+                onClick={closeMenu}
                 className={`py-2 px-4 rounded-md transition-colors ${
                   location.pathname === link.path
                     ? "bg-primary/10 text-purple-500 font-medium"

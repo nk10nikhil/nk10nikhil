@@ -70,7 +70,11 @@ const PROJECTS: Project[] = [
 export default function ProductivitySlider() {
   const projects = useMemo(() => PROJECTS, []);
   const [current, setCurrent] = useState(0);
-  const [isMobileView, setIsMobileView] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(() =>
+    typeof window === "undefined"
+      ? false
+      : window.matchMedia("(max-width: 767px)").matches,
+  );
 
   const rootRef = useRef<HTMLDivElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -107,7 +111,6 @@ export default function ProductivitySlider() {
   };
 
   useEffect(() => {
-    updateViewport();
     window.addEventListener("resize", updateViewport, { passive: true });
     return () => window.removeEventListener("resize", updateViewport);
   }, []);

@@ -11,6 +11,7 @@ import Hero from "../components/section/Hero";
 import BlurBackground from "../components/section/BlurBackground";
 import FloatingObjects from "../components/elements/FloatingObjects";
 import { useInView } from "../hooks/useInView";
+import { hasRuntimeConstraints } from "../lib/browser";
 
 const TechStack = lazy(() => import("../components/section/TechStack"));
 const FeaturedProjects = lazy(
@@ -50,23 +51,10 @@ function DeferredSection({ minHeight = 460, children }: DeferredSectionProps) {
 }
 
 const Index = () => {
-  const [showFloatingEffects, setShowFloatingEffects] = useState(true);
+  const [showFloatingEffects] = useState(() => !hasRuntimeConstraints());
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    const connection = (navigator as any).connection as
-      | {
-          saveData?: boolean;
-          effectiveType?: string;
-        }
-      | undefined;
-
-    const saveData = connection?.saveData === true;
-    const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");
-    const lowCoreDevice = (navigator.hardwareConcurrency ?? 8) <= 4;
-
-    setShowFloatingEffects(!(saveData || slowNetwork || lowCoreDevice));
   }, []);
 
   return (

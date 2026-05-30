@@ -30,7 +30,7 @@ const LetterGlitch = ({
   >([]);
   const grid = useRef({ columns: 0, rows: 0 });
   const context = useRef<CanvasRenderingContext2D | null>(null);
-  const lastGlitchTime = useRef(Date.now());
+  const lastGlitchTime = useRef(0);
   const lastFrameTime = useRef(0);
   const profileRef = useRef({ lowPower: false, reducedMotion: false });
   const inViewRef = useRef(true);
@@ -191,14 +191,13 @@ const LetterGlitch = ({
     }
   };
 
-  const animate = () => {
+  const animate = (nowMs = 0) => {
     if (!runningRef.current) {
       return;
     }
 
     const { lowPower, reducedMotion } = profileRef.current;
     const frameInterval = 1000 / (reducedMotion ? 12 : lowPower ? 20 : 30);
-    const nowMs = performance.now();
     if (frameInterval && nowMs - lastFrameTime.current < frameInterval) {
       animationRef.current = requestAnimationFrame(animate);
       return;
@@ -213,10 +212,12 @@ const LetterGlitch = ({
     const updateRatio = reducedMotion ? 0.008 : lowPower ? 0.02 : 0.05;
     const activePhase = nowMs <= activeUntilRef.current;
 
-    const now = Date.now();
-    if (activePhase && now - lastGlitchTime.current >= effectiveGlitchSpeed) {
+    if (
+      activePhase &&
+      nowMs - lastGlitchTime.current >= effectiveGlitchSpeed
+    ) {
       updateLetters(updateRatio);
-      lastGlitchTime.current = now;
+      lastGlitchTime.current = nowMs;
     }
 
     if (activePhase && smooth && !lowPower && !reducedMotion) {

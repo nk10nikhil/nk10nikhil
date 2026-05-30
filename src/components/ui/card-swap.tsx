@@ -12,6 +12,7 @@ import React, {
   useState,
 } from "react";
 import gsap from "gsap";
+import { hasRuntimeConstraints } from "../../lib/browser";
 
 export interface CardSwapProps {
   width?: number | string;
@@ -90,8 +91,9 @@ const CardSwap: React.FC<CardSwapProps> = ({
   autoplayEnabled = true,
   children,
 }) => {
-  const config =
-    easing === "elastic"
+  const config = useMemo(
+    () =>
+      easing === "elastic"
       ? {
           ease: "elastic.out(0.6,0.9)",
           durDrop: 2,
@@ -107,7 +109,9 @@ const CardSwap: React.FC<CardSwapProps> = ({
           durReturn: 0.8,
           promoteOverlap: 0.45,
           returnDelay: 0.2,
-        };
+        },
+    [easing],
+  );
 
   const childArr = useMemo(
     () => Children.toArray(children) as ReactElement<CardProps>[],
@@ -115,7 +119,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
   );
   const refs = useMemo<CardRef[]>(
     () => childArr.map(() => React.createRef<HTMLDivElement>()),
-    [childArr.length],
+    [childArr],
   );
 
   const order = useRef<number[]>(
@@ -125,27 +129,9 @@ const CardSwap: React.FC<CardSwapProps> = ({
   const tlRef = useRef<gsap.core.Timeline | null>(null);
   const intervalRef = useRef<number | undefined>(undefined);
   const container = useRef<HTMLDivElement>(null);
-  const [reduceRuntimeMotion, setReduceRuntimeMotion] = useState(false);
-
-  useEffect(() => {
-    const connection = (navigator as any).connection as
-      | {
-          saveData?: boolean;
-          effectiveType?: string;
-        }
-      | undefined;
-
-    const saveData = connection?.saveData === true;
-    const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");
-    const lowCoreDevice = (navigator.hardwareConcurrency ?? 8) <= 4;
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    setReduceRuntimeMotion(
-      reducedMotion || saveData || slowNetwork || lowCoreDevice,
-    );
-  }, []);
+  const [reduceRuntimeMotion] = useState(() =>
+    hasRuntimeConstraints({ includeMotion: true }),
+  );
 
   useEffect(() => {
     const total = refs.length;
@@ -252,11 +238,12 @@ const CardSwap: React.FC<CardSwapProps> = ({
   }, [
     autoplayEnabled,
     cardDistance,
+    config,
     verticalDistance,
     delay,
     pauseOnHover,
+    refs,
     skewAmount,
-    easing,
     reduceRuntimeMotion,
   ]);
 

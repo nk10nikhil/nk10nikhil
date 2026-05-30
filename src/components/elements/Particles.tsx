@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { getNavigatorConnection } from "../../lib/browser";
 
 interface ParticlesProps {
   className?: string;
@@ -83,12 +84,7 @@ export default function Particles({
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
-      const connection = (navigator as any).connection as
-        | {
-            saveData?: boolean;
-            effectiveType?: string;
-          }
-        | undefined;
+      const connection = getNavigatorConnection();
 
       const saveData = connection?.saveData === true;
       const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");

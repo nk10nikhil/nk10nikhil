@@ -1,6 +1,8 @@
-import { createContext, useContext, useEffect, useState } from "react";
-
-type Theme = "dark" | "light" | "system";
+import { useEffect, useState } from "react";
+import {
+  ThemeProviderContext,
+  type Theme,
+} from "./theme-context";
 
 type ThemeProviderProps = {
   children: React.ReactNode;
@@ -9,18 +11,6 @@ type ThemeProviderProps = {
   storageKey?: string;
 };
 
-type ThemeProviderState = {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-};
-
-const initialState: ThemeProviderState = {
-  theme: "system",
-  setTheme: () => null,
-};
-
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
-
 export function ThemeProvider({
   children,
   defaultTheme = "system",
@@ -28,17 +18,11 @@ export function ThemeProvider({
   storageKey = "ui-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
-
-  // On mount, sync theme from localStorage if available
-  useEffect(() => {
-    if (typeof window === "undefined") return;
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") return defaultTheme;
     const storedTheme = localStorage.getItem(storageKey) as Theme | null;
-    if (storedTheme && storedTheme !== theme) {
-      setTheme(storedTheme);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    return storedTheme ?? defaultTheme;
+  });
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -76,10 +60,3 @@ export function ThemeProvider({
     </ThemeProviderContext.Provider>
   );
 }
-
-export const useTheme = () => {
-  const context = useContext(ThemeProviderContext);
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider");
-  return context;
-};

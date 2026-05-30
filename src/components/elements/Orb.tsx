@@ -394,6 +394,8 @@ export default function Orb({
     profile.preferredFps,
     profile.reducedMotion,
     rotateOnHover,
+    frag,
+    vert,
   ]);
 
   return <div ref={ctnDom} className="w-full h-full" />;

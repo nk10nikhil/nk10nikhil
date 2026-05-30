@@ -11,6 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { useInView } from "../../hooks/useInView";
+import { hasRuntimeConstraints } from "../../lib/browser";
 
 const skillsData = [
   {
@@ -112,8 +113,12 @@ const slideVariants = {
 const SkillsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [reduceRuntimeMotion, setReduceRuntimeMotion] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window === "undefined" ? false : window.innerWidth < 768,
+  );
+  const [reduceRuntimeMotion] = useState(() =>
+    hasRuntimeConstraints({ includeMotion: true }),
+  );
   const [tabVisible, setTabVisible] = useState(
     typeof document === "undefined"
       ? true
@@ -130,25 +135,6 @@ const SkillsSection = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    const connection = (navigator as any).connection as
-      | {
-          saveData?: boolean;
-          effectiveType?: string;
-        }
-      | undefined;
-
-    const saveData = connection?.saveData === true;
-    const slowNetwork = /2g|slow-2g/.test(connection?.effectiveType ?? "");
-    const lowCoreDevice = (navigator.hardwareConcurrency ?? 8) <= 4;
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    setReduceRuntimeMotion(
-      reducedMotion || saveData || slowNetwork || lowCoreDevice,
-    );
-
-    checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);

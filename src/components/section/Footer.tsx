@@ -12,7 +12,7 @@ const Temp = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8">
           <div>
-            <p className="flex flex-col space-y-8 items-center">
+            <div className="flex flex-col space-y-8 items-center">
               <CircularProfile />
               <div className="flex space-x-3 mt-6">
                 <a
@@ -46,7 +46,7 @@ const Temp = () => {
                   <Mail className="h-7 w-7" />
                 </a>
               </div>
-            </p>
+            </div>
           </div>
 
           <div className="ml-20 hidden md:block">

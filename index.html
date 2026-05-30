@@ -74,12 +74,10 @@
     <!-- DNS Prefetch for performance -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
 
     <!-- Preload critical assets -->
     <link rel="preload" as="image" href="/profile.png" />
@@ -90,22 +88,28 @@
     <link rel="prefetch" href="/about" />
     <link rel="prefetch" href="/contact" />
 
-    <!-- Google tag (gtag.js) - Load asynchronously -->
+    <!-- Google tag (gtag.js) - production only -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      const analyticsHosts = new Set(["www.nk10nikhil.dev", "nk10nikhil.dev"]);
+
+      if (analyticsHosts.has(window.location.hostname)) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() {
+          window.dataLayer.push(arguments);
+        };
+        window.gtag("js", new Date());
+        window.gtag("config", "G-BGGW58D23X", {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+
+        const gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-BGGW58D23X";
+        document.head.appendChild(gtagScript);
       }
-      gtag("js", new Date());
-      gtag("config", "G-BGGW58D23X", {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
     </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BGGW58D23X"
-    ></script>
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">

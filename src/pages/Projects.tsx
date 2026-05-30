@@ -59,7 +59,15 @@ const CardItem = ({
     } else {
       ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
-  }, [isMouseEntered, rotateX, rotateY, rotateZ, translateX, translateY, translateZ]);
+  }, [
+    isMouseEntered,
+    rotateX,
+    rotateY,
+    rotateZ,
+    translateX,
+    translateY,
+    translateZ,
+  ]);
 
   useEffect(() => {
     handleAnimations();

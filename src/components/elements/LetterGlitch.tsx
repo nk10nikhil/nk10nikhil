@@ -212,10 +212,7 @@ const LetterGlitch = ({
     const updateRatio = reducedMotion ? 0.008 : lowPower ? 0.02 : 0.05;
     const activePhase = nowMs <= activeUntilRef.current;
 
-    if (
-      activePhase &&
-      nowMs - lastGlitchTime.current >= effectiveGlitchSpeed
-    ) {
+    if (activePhase && nowMs - lastGlitchTime.current >= effectiveGlitchSpeed) {
       updateLetters(updateRatio);
       lastGlitchTime.current = nowMs;
     }

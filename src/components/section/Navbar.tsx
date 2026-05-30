@@ -191,7 +191,7 @@ const Navbar = () => {
         >
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             {links.map((link) => (
-            <Link
+              <Link
                 key={link.path}
                 to={link.path}
                 onClick={closeMenu}

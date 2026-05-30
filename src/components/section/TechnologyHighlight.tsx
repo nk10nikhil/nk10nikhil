@@ -18,7 +18,10 @@ const TechnologyHighlight = () => {
               Problem Solving
             </h2>
             <p className="text-muted-foreground text-lg text-center">
-              I excel at breaking down complex problems into manageable parts and finding efficient solutions. My approach combines analytical thinking with creativity, allowing me to tackle challenges from multiple angles and deliver innovative results.
+              I excel at breaking down complex problems into manageable parts
+              and finding efficient solutions. My approach combines analytical
+              thinking with creativity, allowing me to tackle challenges from
+              multiple angles and deliver innovative results.
             </p>
           </motion.div>
 

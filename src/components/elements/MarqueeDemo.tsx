@@ -45,7 +45,7 @@ const reviews = [
     img: "https://avatar.vercel.sh/karan",
   },
   {
-    name : "Anupriya",
+    name: "Anupriya",
     username: "@anupriya",
     body: "The user experience is fantastic. It's so intuitive and easy to use.",
     img: "https://avatar.vercel.sh/anupriya",
@@ -61,7 +61,7 @@ const reviews = [
     username: "@akshay",
     body: "The customization options are great. I can tailor it to my specific needs.",
     img: "https://avatar.vercel.sh/akshay",
-  }
+  },
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);

@@ -946,7 +946,9 @@ const Projects = () => {
               My Projects
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto pb-5">
-              A showcase of my work, from full-stack applications to AI/ML projects and automation scripts. Explore my portfolio to see the breadth of my skills and creativity in action.
+              A showcase of my work, from full-stack applications to AI/ML
+              projects and automation scripts. Explore my portfolio to see the
+              breadth of my skills and creativity in action.
             </p>
             <span className="flex justify-center items-center gap-10 m-0">
               <StarOnGithubButton />

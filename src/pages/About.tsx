@@ -19,9 +19,6 @@ import {
   Calendar,
   Sparkles,
   TrendingUp,
-  BookOpen,
-  Coffee,
-  Gamepad2,
   Heart,
   Zap,
   Globe,
@@ -76,32 +73,6 @@ const About = () => {
         title: "Quality",
         desc: "Focused on writing clean, scalable, and maintainable code",
         color: "from-orange-500 to-red-500",
-      },
-    ],
-    [],
-  );
-
-  const funFacts = useMemo(
-    () => [
-      {
-        icon: Coffee,
-        text: "Coffee enthusiast with 300+ cups/year",
-        color: "from-amber-500 to-orange-500",
-      },
-      {
-        icon: Gamepad2,
-        text: "Gamer who codes game logic for fun",
-        color: "from-purple-500 to-pink-500",
-      },
-      {
-        icon: BookOpen,
-        text: "Read 25+ tech books this year",
-        color: "from-blue-500 to-cyan-500",
-      },
-      {
-        icon: Heart,
-        text: "Passionate open-source contributor",
-        color: "from-rose-500 to-pink-500",
       },
     ],
     [],
@@ -715,51 +686,6 @@ const About = () => {
                       })}
                     </div>
                   </motion.div>
-
-                  {/* Fun Facts */}
-                  {/* <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={valuesInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="hidden md:block"
-                  >
-                    <h2 className="text-3xl font-bold mb-8 text-center">
-                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-pink-200 to-white">
-                        Fun Facts
-                      </span>
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {funFacts.map((fact, index) => {
-                        const Icon = fact.icon;
-                        return (
-                          <motion.div
-                            key={fact.text}
-                            initial={{
-                              opacity: 0,
-                              x: index % 2 === 0 ? -20 : 20,
-                            }}
-                            animate={valuesInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{
-                              duration: 0.5,
-                              delay: 0.4 + index * 0.1,
-                            }}
-                            whileHover={{ scale: 1.02 }}
-                            className="glass-morphism rounded-xl p-5 flex items-center gap-4 hover:shadow-xl transition-all duration-300"
-                          >
-                            <div
-                              className={cn(
-                                "w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center flex-shrink-0",
-                                fact.color,
-                              )}
-                            >
-                              <Icon className="w-6 h-6 text-white" />
-                            </div>
-                            <p className="text-white/80">{fact.text}</p>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
-                  </motion.div> */}
 
                   {/* Top Skills */}
                   <motion.div

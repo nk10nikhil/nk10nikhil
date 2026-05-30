@@ -3,41 +3,65 @@ import { Marquee } from "./Marquee";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
+    name: "Rahul",
+    username: "@rahul",
     body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    img: "https://avatar.vercel.sh/rahul",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Ananya",
+    username: "@ananya",
+    body: "This is a game-changer. It has completely transformed the way I work.",
+    img: "https://avatar.vercel.sh/ananya",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Vikram",
+    username: "@vikram",
+    body: "The performance is incredible. It's so fast and responsive.",
+    img: "https://avatar.vercel.sh/vikram",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Sanya",
+    username: "@sanya",
+    body: "The design is sleek and modern. I love the attention to detail.",
+    img: "https://avatar.vercel.sh/sanya",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "Arjun",
+    username: "@arjun",
+    body: "The support team is fantastic. They helped me with all my questions.",
+    img: "https://avatar.vercel.sh/arjun",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
+    name: "Priya",
+    username: "@priya",
+    body: "I can't imagine going back to how I worked before. This is a must-have.",
+    img: "https://avatar.vercel.sh/priya",
   },
+  {
+    name: "Karan",
+    username: "@karan",
+    body: "The features are incredibly useful. It has made my workflow so much smoother.",
+    img: "https://avatar.vercel.sh/karan",
+  },
+  {
+    name : "Anupriya",
+    username: "@anupriya",
+    body: "The user experience is fantastic. It's so intuitive and easy to use.",
+    img: "https://avatar.vercel.sh/anupriya",
+  },
+  {
+    name: "Satyam",
+    username: "@satyam",
+    body: "The integration with other tools is seamless. It has made my life so much easier.",
+    img: "https://avatar.vercel.sh/satyam",
+  },
+  {
+    name: "Akshay",
+    username: "@akshay",
+    body: "The customization options are great. I can tailor it to my specific needs.",
+    img: "https://avatar.vercel.sh/akshay",
+  }
 ];
 
 const firstRow = reviews.slice(0, reviews.length / 2);

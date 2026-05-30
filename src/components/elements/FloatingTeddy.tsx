@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const FloatingTeddy = () => {
   const [loaded, setLoaded] = useState(false);
   const [count, setCount] = useState(0);
-  const targetCount = 20;
+  const targetCount = 40;
 
   useEffect(() => {
     // Simulating content load

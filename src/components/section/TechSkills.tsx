@@ -29,8 +29,10 @@ const TechSkills = () => {
               Technologies I Use
             </h2>
             <div className="text-muted-foreground text-lg text-center">
-              These are the tools and technologies I am currently using in my
-              projects. I am always eager to learn and explore new technologies.
+              I have experience with a wide range of technologies, including
+              frontend frameworks, backend technologies, databases, and cloud
+              platforms. I am always eager to learn new tools and stay updated
+              with the latest trends in the tech industry.
             </div>
           </motion.div>
         </div>

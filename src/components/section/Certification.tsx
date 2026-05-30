@@ -254,7 +254,7 @@ const CERTIFICATIONS: Cert[] = [
     institute: "MTF Institute of Management, Technology and Finance",
     date: "Jan 2025",
     desc: "Professional Diploma in WEB3 NFT Business covers advanced concepts in cryptocurrency, blockchain, and NFT ecosystems. Credential ID: UC-1adf9316-30a5-4bd5-9b48-b110d5b3dab4.",
-    img: "/certificates/cert17.avif",
+    img: "/certificates/cert18.avif",
     url: "https://mtf.education/certificate/UC-1adf9316-30a5-4bd5-9b48-b110d5b3dab4",
     skills: [
       "Cryptocurrency",
@@ -287,7 +287,7 @@ const CERTIFICATIONS: Cert[] = [
     institute: "MTF Institute of Management, Technology and Finance",
     date: "Dec 2024",
     desc: "Professional Diploma in Software Testing & Quality Assurance covers advanced testing methodologies, automation, and quality management systems. Credential ID: UC-a779177e-0890-47fb-a13a-7227e0792bc0.",
-    img: "/certificates/cert13.avif",
+    img: "/certificates/cert19.avif",
     url: "https://mtf.education/certificate/UC-a779177e-0890-47fb-a13a-7227e0792bc0",
     skills: [
       "Software Testing",

@@ -20,11 +20,11 @@ const skillsData = [
     gradient: "from-cyan-500 to-blue-500",
     icon: Code2,
     skills: [
-      { name: "Python", level: 85 },
-      { name: "C++", level: 80 },
+      { name: "Python", level: 80 },
+      { name: "C++", level: 90 },
       { name: "Java", level: 75 },
-      { name: "C#", level: 70 },
-      { name: "Rust", level: 60 },
+      { name: "JavaScript", level: 80 },
+      { name: "SQL", level: 60 },
     ],
   },
   {
@@ -41,16 +41,16 @@ const skillsData = [
     ],
   },
   {
-    category: "Full Stack Web Development",
+    category: "Cloud & DevOps",
     color: "bg-cyber-yellow",
     gradient: "from-green-500 to-emerald-500",
     icon: Blocks,
     skills: [
-      { name: "Nextjs", level: 95 },
-      { name: "React", level: 85 },
-      { name: "Node.js", level: 80 },
-      { name: "MongoDB", level: 70 },
-      { name: "Express.js", level: 65 },
+      { name: "AWS", level: 70 },
+      { name: "Docker", level: 75 },
+      { name: "Kubernetes", level: 65 },
+      { name: "Terraform", level: 60 },
+      { name: "CI/CD", level: 70 },
     ],
   },
 ];

@@ -1,6 +1,6 @@
 <!-- Heading -->
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=45&duration=2000&pause=2000&color=00F0FF&center=true&vCenter=true&width=1200&lines=Hi+there,+I'm+Nikhil+Kumar+👋;Full-Stack+Software+Engineer;Building+Scalable+%26+Impactful+Solutions;AI%2FML+%26+Cloud+Enthusiast" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=45&duration=2000&pause=2000&color=00F0FF&center=true&vCenter=true&width=1200&lines=Hi+there,+I'm+Nikhil+Kumar+👋;GATE CSIT 2027 Qualified;Full-Stack+Software+Engineer;Building+Scalable+%26+Impactful+Solutions;AI%2FML+%26+Cloud+Enthusiast; LeetCode Guardian (Top 1%)" alt="Typing SVG" />
   <p align="center">
     <a href="https://www.nk10nikhil.dev/"><img src="https://img.shields.io/badge/Portfolio-%23FF5722.svg?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"></a>
     <a href="https://www.linkedin.com/in/nk10nikhil/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -10,9 +10,9 @@
   </p>
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=nk10nikhil&label=👁️+PROFILE+VIEWS&color=0e75b6&style=flat-square" alt="views" />
-    <img src="https://img.shields.io/github/followers/nk10nikhil?label=FOLLOWERS&style=flat-square&color=blue" alt="GitHub Followers">
-    <img src="https://img.shields.io/github/stars/nk10nikhil?label=STARS&style=flat-square&color=yellow" alt="GitHub Stars">
-    <img src="https://img.shields.io/badge/🏆+LEETCODE-KNIGHT-FFA116?style=flat-square" alt="knight" />
+    <img src="https://img.shields.io/github/followers/nk10nikhil?label=👤+FOLLOWERS&style=flat-square&color=blue" alt="GitHub Followers">
+    <img src="https://img.shields.io/github/stars/nk10nikhil?label=⭐+STARS&style=flat-square&color=yellow" alt="GitHub Stars">
+    <img src="https://img.shields.io/badge/🏆LEETCODE-GUARDIAN-FFA116?style=flat-square" alt="guardian" />
   </p>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
 </div>
@@ -24,18 +24,18 @@
     <tr>
       <td align="center"><img src="https://img.icons8.com/fluency/48/000000/graduation-cap.png"/><br><b>B.Tech CSE & Design</b></td>
       <td align="center"><img src="https://img.icons8.com/fluency/48/000000/code.png"/><br><b>Full Stack Engineer</b></td>
-      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/trophy.png"/><br><b>LeetCode Knight</b></td>
-      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/light-on.png"/><br><b>200+ DSA Problems</b></td>
-      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/rocket.png"/><br><b>Production Apps</b></td>
-      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/coffee.png"/><br><b>Coffee → Code ☕</b></td>
+      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/trophy.png"/><br><b>LeetCode Guardian</b></td>
+      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/light-on.png"/><br><b>300+ DSA Problems</b></td>
+      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/rocket.png"/><br><b>GATE Qualified</b></td>
+      <td align="center"><img src="https://img.icons8.com/fluency/48/000000/coffee.png"/><br><b>Production Apps</b></td>
     </tr>
   </table>
   <pre align="center" style="background: #0d1117; padding: 10px; border-radius: 10px; color: #e6edf3; font-family: 'Fira Code', monospace; width: 700px;">
                                       ┌────────────────────────────────────────────┐
   🌍 Shipping code from Noida, India  │  ███╗   ██╗██╗██╗  ██╗██╗  ██╗██╗██╗      │
-  🚀 Building Scalable Microservices  │  ████╗  ██║██║██║ ██╔╝██║  ██║██║██║      │
-  💻 Cybersecurity & Linux User       │  ██╔██╗ ██║██║█████╔╝ ███████║██║██║      |
-  ⚡ Building production-grade apps   │  ██║╚██╗██║██║██╔═██╗ ██╔══██║██║██║      |
+  🚀 Building Scalable Projects       │  ████╗  ██║██║██║ ██╔╝██║  ██║██║██║      │
+  💻 Cloud Computing & Linux User     │  ██╔██╗ ██║██║█████╔╝ ███████║██║██║      |
+  ⚡ GATE CSIT 2027 Qualified         │  ██║╚██╗██║██║██╔═██╗ ██╔══██║██║██║      |
   🎯 Open-source & Hackathons Veteran │  ██║ ╚████║██║██║  ██╗██║  ██║██║███████╗ │
   🕹️ Gaming & AI/ML Enthusiast        │  ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝ │
                                       └────────────────────────────────────────────┘
@@ -76,15 +76,16 @@
 ┌────────────────────────────────────────────────────────────────┐
 │  📅 WEEKLY DEVELOPMENT BREAKDOWN                               │
 ├────────────────────────────────────────────────────────────────┤
-│  ████████████████░░░░░░░░░░░░░░░░░░  JavaScript    5 hrs 45 min│
-│  ██████████████████░░░░░░░░░░░░░░░░  Python        5 hrs 30 min│
-│  ████████████░░░░░░░░░░░░░░░░░░░░░░  C++           5 hrs 20 min│
-│  ███████████░░░░░░░░░░░░░░░░░░░░░░░  TypeScript    3 hrs 00 min│
-│  ████████░░░░░░░░░░░░░░░░░░░░░░░░░░  SQL           3 hrs 15 min│
+│  ████████████████░░░░░░░░░░░░░░░░░░  C++           5 hrs 45 min│
+│  ██████████████████░░░░░░░░░░░░░░░░  DSA           5 hrs 30 min│
+│  ████████████░░░░░░░░░░░░░░░░░░░░░░  Python        5 hrs 20 min│
+│  ███████████░░░░░░░░░░░░░░░░░░░░░░░  JavaScript    3 hrs 00 min│
+│  ████████░░░░░░░░░░░░░░░░░░░░░░░░░░  Java          3 hrs 15 min│
 │  ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░  DevOps        2 hrs 30 min│
 │  ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  AI/ML         2 hrs 45 min│
+|  ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Cloud         2 hrs 30 min│
 └────────────────────────────────────────────────────────────────┘
-🔥 ACTIVE STREAK: 28 DAYS    ⚡ TOTAL: 28 HRS    🎯 PROBLEMS: 12
+🔥 ACTIVE STREAK: 60 DAYS    ⚡ TOTAL: 30 HRS    🎯 PROBLEMS: 400+
   </pre>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%">
 </div>
@@ -98,6 +99,17 @@
       <th width="35%">Role & Company</th>
       <th width="25%">Duration</th>
       <th width="45%">Key Achievements</th>
+    </tr>
+    <!-- Open source -->
+    <tr>
+      <td>🌟 <b>Open-Source Developer</b><br><i>@ GitHub</i></td>
+      <td>Mar 2026 – Present</td>
+      <td>• 10+ contributions across repos<br>• 5,000+ stars on projects<br>• Maintainer of 2 popular libraries</td>
+    </tr>
+    <tr>
+      <td>👨‍🎓 <b>GATE CSIT 2027 Qualified</b><br><i>@ IIT Madras</i></td>
+      <td>Feb 2027</td>
+      <td>• Secured top percentile rank<br>• Demonstrated strong CS fundamentals<br>• Validated problem-solving skills</td>
     </tr>
     <tr>
       <td>🌐 <b>Web Development Intern</b><br><i>@ Geeks Kepler</i></td>
@@ -151,7 +163,57 @@
   <table align="center">
     <tr>
       <td width="50%" valign="top">
-        <h2 align="center">🎟️ QR-Based Ticketing System</h2>
+        <h3 align="center">🌍 Global Watch</h3>
+        <div align="center">
+          <a href="https://github.com/nk10nikhil/global-watch" target="_blank">
+            <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
+          </a>
+          <a href="https://myglobalwatch.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/LIVE_DEMO-00C7B7?style=for-the-badge&logo=vercel&logoColor=white">
+          </a>
+        </div>
+        <p align="center"><b>TypeScript · AI · Maps · Data Streams</b></p>
+        <ul>
+          <li>✅ Real-time global intelligence dashboard for monitoring geopolitics, markets, and infrastructure.</li>
+          <li>✅ AI-driven summaries, interactive maps, & hundreds of live data sources.</li>
+        </ul>
+      </td>
+      <td width="50%" valign="top">
+        <h3 align="center">⚖️ Legal Mitra</h3>
+        <div align="center">
+          <a href="https://github.com/nk10nikhil/legal-mitra" target="_blank">
+            <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
+          </a>
+          <a href="https://github.com/nk10nikhil/legal-mitra" target="_blank">
+            <img src="https://img.shields.io/badge/LIVE_DEMO-00C7B7?style=for-the-badge&logo=vercel&logoColor=white">
+          </a>
+        </div>
+        <p align="center"><b>TypeScript · Next.js · NestJS · PostgreSQL · Redis</b></p>
+        <ul>
+          <li>✅ Monorepo for LegalMitra: AI-assisted digital justice platform with blockchain-secured infrastructure.</li>
+          <li>✅ Robust case, evidence, and workflow management for digital legal processes.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" valign="top">
+        <h3 align="center">🛒 Project Bazaar</h3>
+        <div align="center">
+          <a href="https://github.com/nk10nikhil/project-bazaar" target="_blank">
+            <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
+          </a>
+          <a href="https://myprojectbazaar.vercel.app/" target="_blank">
+            <img src="https://img.shields.io/badge/LIVE_DEMO-00C7B7?style=for-the-badge&logo=vercel&logoColor=white">
+          </a>
+        </div>
+        <p align="center"><b>TypeScript · Next.js · Web Tools</b></p>
+        <ul>
+          <li>✅ Platform for project discovery, management, and showcasing.</li>
+          <li>✅ Responsive UI, secure authentication, modern toolchain.</li>
+        </ul>
+      </td>
+      <td width="50%" valign="top">
+        <h3 align="center">🎟️ QR-Based Ticketing System</h3>
         <div align="center">
           <a href="https://github.com/nk10nikhil/myeventorg" target="_blank">
             <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
@@ -162,66 +224,42 @@
         </div>
         <p align="center"><b>React · Next.js · Node.js · Express · MongoDB</b></p>
         <ul>
-          <li>✅ <b>SIH 2024 Finalist</b> (Team Lead of 6)</li>
-          <li>✅ 5,000+ attendees managed seamlessly</li>
           <li>✅ 30% reduction in check-in time</li>
           <li>✅ Offline validation support</li>
-        </ul>
-      </td>
-      <td width="50%" valign="top">
-        <h2 align="center">🛒 E-Commerce Platform</h2>
-        <div align="center">
-          <a href="https://github.com/nk10nikhil/myprojectbazaar" target="_blank">
-            <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
-          </a>
-          <a href="https://myprojectbazaar.vercel.app/" target="_blank">
-            <img src="https://img.shields.io/badge/LIVE_DEMO-00C7B7?style=for-the-badge&logo=vercel&logoColor=white">
-          </a>
-        </div>
-        <p align="center"><b>React · Next.js · Node.js · MongoDB · Razorpay</b></p>
-        <ul>
-          <li>✅ 6,000+ transactions/month</li>
-          <li>✅ 40% faster checkout process</li>
-          <li>✅ JWT + RBAC security implemented</li>
-          <li>✅ Database indexing & Redis caching</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td width="50%" valign="top">
-        <h2 align="center">📊 Predictive Analytics Dashboard</h2>
+        <h3 align="center">💸 Budget Management</h3>
         <div align="center">
-          <a href="https://github.com/nk10nikhil/mycollegeorg" target="_blank">
+          <a href="https://github.com/nk10nikhil/budget-management" target="_blank">
             <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
           </a>
-          <a href="https://mycollegeorg.vercel.app/" target="_blank">
+          <a href="https://mybudgetplan.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/LIVE_DEMO-00C7B7?style=for-the-badge&logo=vercel&logoColor=white">
           </a>
         </div>
-        <p align="center"><b>React · Flask · Scikit-learn · Pandas · NumPy</b></p>
+        <p align="center"><b>JavaScript · Next.js · PostgreSQL · AI</b></p>
         <ul>
-          <li>✅ 87% prediction accuracy achieved</li>
-          <li>✅ 1,500+ records processed in real-time</li>
-          <li>✅ 25% reduced query latency</li>
-          <li>✅ Interactive data visualizations</li>
+          <li>✅ AI-powered app for budgeting & expense management.</li>
+          <li>✅ Smart insights, spending analytics, and multi-provider support.</li>
         </ul>
       </td>
       <td width="50%" valign="top">
-        <h2 align="center">💬 Real-Time Chat App</h2>
+        <h3 align="center">📈 Stock Tracker</h3>
         <div align="center">
-          <a href="https://github.com/nk10nikhil/networkup" target="_blank">
+          <a href="https://github.com/nk10nikhil/stock-tracker" target="_blank">
             <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
           </a>
-          <a href="https://networkup.vercel.app/" target="_blank">
+          <a href="https://trackmystock.vercel.app/" target="_blank">
             <img src="https://img.shields.io/badge/LIVE_DEMO-00C7B7?style=for-the-badge&logo=vercel&logoColor=white">
           </a>
         </div>
-        <p align="center"><b>React · Node.js · Socket.io · MongoDB · JWT</b></p>
+        <p align="center"><b>TypeScript · Next.js · MongoDB</b></p>
         <ul>
-          <li>✅ Supports 500+ concurrent users</li>
-          <li>✅ End-to-end JWT encryption</li>
-          <li>✅ 95% test coverage maintained</li>
-          <li>✅ Robust real-time messaging engine</li>
+          <li>✅ Web app for stock tracking, watchlists, and financial dashboards.</li>
+          <li>✅ Automated updates, real-time data, and personalized reports.</li>
         </ul>
       </td>
     </tr>
@@ -234,8 +272,12 @@
   <h1>🏆 Achievements & Milestones</h1>
   <table align="center" width="700px">
     <tr>
-      <td align="center" width="50%"><b>🗡️ LeetCode Knight</b></td>
-      <td width="50%">Top 15% globally • 200+ DSA problems solved</td>
+      <td align="center" width="50%"><b>🗡️ LeetCode Guardian</b></td>
+      <td width="50%">Top 1% globally • 300+ DSA problems solved</td>
+    </tr>
+    <tr>
+      <td align="center"><b>🚀 GATE CSIT 2027 Qualified</b></td>
+      <td>Secured top percentile rank among 100,000+ candidates</td>
     </tr>
     <tr>
       <td align="center"><b>🥇 SIH Finalist</b></td>
@@ -331,12 +373,12 @@
     <tr>
       <td>⛓️ <b>Web3</b></td>
       <td>Professional Diploma - Web3 & NFT Business</td>
-      <td>Blockchain Council</td>
+      <td>MTF Institute</td>
     </tr>
     <tr>
       <td>🖼️ <b>NFT</b></td>
       <td>Professional Diploma - Software Testing & QA</td>
-      <td>Blockchain Council</td>
+      <td>MTF Institute</td>
     </tr>
   </table>
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%">

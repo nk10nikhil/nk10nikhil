@@ -807,4 +807,3 @@ const Icons = {
     </svg>
   ),
 };
-

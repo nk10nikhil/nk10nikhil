@@ -129,6 +129,7 @@ const LogoScroll: React.FC<LogoScrollProps> = ({ className }) => {
 
   return (
     <div className={cn("py-10 bg-black relative", className)}>
+      {/* Header section */}
       <div className="container mx-auto px-4 mb-8">
         <div className="flex items-center gap-3 mb-10">
           <div className="h-px flex-1 bg-white/10"></div>
@@ -139,19 +140,22 @@ const LogoScroll: React.FC<LogoScrollProps> = ({ className }) => {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden">
+      {/* Set explicit height to prevent shift */}
+      <div className="relative w-full overflow-hidden h-10">
         <div className="absolute left-0 top-0 h-full w-20 z-10 bg-gradient-to-r from-black to-transparent"></div>
         <div className="absolute right-0 top-0 h-full w-20 z-10 bg-gradient-to-l from-black to-transparent"></div>
 
-        <div className="w-full relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-          <div className="w-max flex items-center justify-center gap-2 animate-[scroll_30s_linear_infinite]">
+        <div className="w-full h-full relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+          {/* Use flex with specific width instead of w-max */}
+          <div className="flex items-center justify-center gap-2 animate-[scroll_30s_linear_infinite] h-full">
             {loopStacks.map((tech, index) => (
               <div
                 key={`${tech.name}-${index}`}
-                className="flex items-center justify-center px-4 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-lg transition-all duration-300 scale-75 md:scale-75 lg:scale-100 gap-2"
+                // Remove scale transforms, use fixed sizes instead
+                className="flex items-center justify-center px-4 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-lg transition-all duration-300 gap-2 flex-shrink-0"
               >
                 {tech.icon}
-                <span className="text-white/60 hover:text-white/90 transition-colors duration-300 font-semibold text-xl">
+                <span className="text-white/60 hover:text-white/90 transition-colors duration-300 font-semibold text-xl whitespace-nowrap">
                   {tech.name}
                 </span>
               </div>

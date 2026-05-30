@@ -329,7 +329,7 @@ const Certification = () => {
         setIsTransitioning(false);
       }, 500);
     },
-    [isTransitioning]
+    [isTransitioning],
   );
 
   const hasMultipleCerts = CERTIFICATIONS.length > 1;

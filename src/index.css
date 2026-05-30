@@ -727,9 +727,10 @@ video {
 }
 
 /* Hide scrollbar for all browsers */
-html, body {
+html,
+body {
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 html::-webkit-scrollbar,

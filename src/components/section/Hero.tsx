@@ -25,7 +25,7 @@ const Hero = () => {
       { text: "Designs", imgPath: "/images/designs.svg" },
       { text: "Code", imgPath: "/images/code.svg" },
     ],
-    []
+    [],
   );
 
   // Defer GSAP animation until component is visible and loaded
@@ -46,13 +46,13 @@ const Hero = () => {
               duration: 0.8,
               ease: "power2.out",
               force3D: true, // GPU acceleration
-            }
+            },
           );
           hasAnimated.current = true;
         }
       });
     },
-    { dependencies: [loaded], scope: heroTextRef }
+    { dependencies: [loaded], scope: heroTextRef },
   );
 
   useEffect(() => {
@@ -94,7 +94,7 @@ const Hero = () => {
       "Python",
       "Java",
     ],
-    []
+    [],
   );
 
   return (
@@ -195,11 +195,7 @@ const Hero = () => {
                 asChild
                 className="hover:bg-gradient-to-br from-primary via-purple-500 to-indigo-400 hover:bg-primary/90"
               >
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                   Resume / CV <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>

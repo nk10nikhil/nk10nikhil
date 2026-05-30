@@ -12,7 +12,6 @@ const Loader = React.memo(({ isLoading, onTransitionEnd }: LoaderProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const [showVideo, setShowVideo] = useState(true);
 
-
   // Fallback timeout in case the intro video cannot autoplay/end event is missed.
   useEffect(() => {
     const introDuration = 4500;

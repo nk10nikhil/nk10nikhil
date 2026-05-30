@@ -70,7 +70,6 @@ const Contact = () => {
               transition={{ duration: 0.3 }}
               className="inline-block mb-6"
             >
-              <div className="w-24 h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0 mx-auto mb-8"></div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-4 tracking-tight">
                 Let's Connect
               </h1>

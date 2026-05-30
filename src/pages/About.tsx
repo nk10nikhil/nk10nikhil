@@ -124,20 +124,20 @@ const About = () => {
   const workExperience = useMemo(
     () => [
       {
-        title: "Full Stack Engineer",
-        company: "WeBuilt_U",
-        period: "Jan 2025 - Jun 2025",
+        title: "Web Development Intern",
+        company: "Geeks Kepler",
+        period: "Nov 2025 - Jan 2026",
         description:
-          "Led end-to-end full-stack development, building the company platform from scratch. Designed scalable and secure architectures with strong focus on performance and user experience. Mentored developers, collaborated in Agile sprints, and implemented CI/CD pipelines reducing release cycles by ~40%.",
-        technologies: [
-          "React",
-          "Next.js",
-          "Node.js",
-          "MongoDB",
-          "CI/CD",
-          "Agile",
-          "Team Leadership",
-        ],
+          "Selected through Unstop Tech Fair 2025 for a remote web development internship. Designed responsive, cross-browser-compatible web interfaces and translated UI/UX designs into high-performance functional components using modern frontend practices.",
+        technologies: ["HTML", "CSS", "JavaScript", "UI/UX"],
+      },
+      {
+        title: "Open-Source Tech Contributor",
+        company: "GirlScript Summer of Code (GSSoC 2025)",
+        period: "Jul 2025 - Sep 2025",
+        description:
+          "Contributed to open-source projects in a distributed development environment. Collaborated with global mentors and contributors while following Git/GitHub best practices including pull requests, issue tracking, testing, and structured code reviews.",
+        technologies: ["Git", "GitHub", "Open Source", "Collaboration"],
       },
       {
         title: "Open Source Developer",
@@ -154,20 +154,20 @@ const About = () => {
         ],
       },
       {
-        title: "Open-Source Tech Contributor",
-        company: "GirlScript Summer of Code (GSSoC 2025)",
-        period: "Jul 2025 - Sep 2025",
+        title: "Full Stack Engineer",
+        company: "WeBuilt_U",
+        period: "Jan 2025 - Jun 2025",
         description:
-          "Contributed to open-source projects in a distributed development environment. Collaborated with global mentors and contributors while following Git/GitHub best practices including pull requests, issue tracking, testing, and structured code reviews.",
-        technologies: ["Git", "GitHub", "Open Source", "Collaboration"],
-      },
-      {
-        title: "Web Development Intern",
-        company: "Geeks Kepler",
-        period: "Nov 2025 - Jan 2026",
-        description:
-          "Selected through Unstop Tech Fair 2025 for a remote web development internship. Designed responsive, cross-browser-compatible web interfaces and translated UI/UX designs into high-performance functional components using modern frontend practices.",
-        technologies: ["HTML", "CSS", "JavaScript", "UI/UX"],
+          "Led end-to-end full-stack development, building the company platform from scratch. Designed scalable and secure architectures with strong focus on performance and user experience. Mentored developers, collaborated in Agile sprints, and implemented CI/CD pipelines reducing release cycles by ~40%.",
+        technologies: [
+          "React",
+          "Next.js",
+          "Node.js",
+          "MongoDB",
+          "CI/CD",
+          "Agile",
+          "Team Leadership",
+        ],
       },
       {
         title: "Professional Freelancer",
@@ -205,13 +205,14 @@ const About = () => {
       {
         degree: "Bachelor of Technology - Computer Science & Design",
         institution: "Galgotias College of Engineering and Technology",
-        period: "Oct 2023 - Jul 2027",
+        period: "Oct 2023 - Present",
         grade: "CGPA: 8.52",
         description:
           "Focused on software engineering, full-stack development, and user-centered design. Actively involved in open-source contributions, hackathons, and real-world application development.",
         highlights: [
           "Smart India Hackathon 2024 – Team Leader (Finalist)",
           "Open Source Contributor (GSSoC, GoFr SoC)",
+          "GATE CSIT Qualified (2027)",
           "Core Coursework: DSA, Discrete Structures, Logic Theory, UI/UX",
         ],
       },
@@ -219,6 +220,7 @@ const About = () => {
         degree: "Professional Diploma - Software Testing & Quality Assurance",
         institution: "Institute of Management, Technology and Finance",
         period: "Jan 2025 - Aug 2025",
+        grade: "Grade: A1",
         description:
           "Trained in software testing fundamentals, QA best practices, SDLC/STLC, bug lifecycle, and performance improvement. Hands-on experience with manual testing, test case design, and defect tracking.",
         highlights: [
@@ -231,6 +233,7 @@ const About = () => {
         degree: "Professional Diploma - Web3 NFT Business",
         institution: "Institute of Management, Technology and Finance",
         period: "Jan 2025 - Aug 2025",
+        grade: "Grade: A1",
         description:
           "Gained foundational knowledge of blockchain, decentralized applications, token ecosystems, and NFT use cases. Explored emerging digital business models and Web3 innovation strategies.",
         highlights: [
@@ -382,7 +385,7 @@ const About = () => {
                           </Button>
                           <Button size="icon" variant="ghost" asChild>
                             <a
-                              href="https://nk10nikhil.vercel.app"
+                              href="https://nk10nikhil.dev"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -576,8 +579,8 @@ const About = () => {
                           <span className="text-white font-semibold">
                             Nikhil Kumar
                           </span>
-                          , a Computer Science & Design undergrad passionate
-                          about building{" "}
+                          , a GATE CSIT Qualified and Computer Science & Design
+                          undergrad passionate about building{" "}
                           <span className="text-purple-400 font-medium">
                             scalable, secure, and user-focused
                           </span>{" "}
@@ -640,20 +643,20 @@ const About = () => {
                         <Briefcase className="w-8 h-8 text-blue-400 mb-2" />
                         <h3 className="font-semibold mb-1">Role</h3>
                         <p className="text-sm text-muted-foreground">
-                          Co-Founder & CTO
+                          Full-Stack Software Engineer
                         </p>
                         <p className="text-xs text-muted-foreground/60">
-                          WeBuilt_U
+                          Open for Opportunities
                         </p>
                       </div>
                       <div className="glass-morphism rounded-xl p-4 hover:scale-105 transition-transform duration-300">
                         <Zap className="w-8 h-8 text-yellow-400 mb-2" />
-                        <h3 className="font-semibold mb-1">Focus</h3>
+                        <h3 className="font-semibold mb-1">DSA</h3>
                         <p className="text-sm text-muted-foreground">
-                          Full-Stack Development
+                          LeetCode Guardian
                         </p>
                         <p className="text-xs text-muted-foreground/60">
-                          MERN • AI/ML • Cloud
+                          Top 1% Globally
                         </p>
                       </div>
                       <div className="glass-morphism rounded-xl p-4 hover:scale-105 transition-transform duration-300">
@@ -714,7 +717,7 @@ const About = () => {
                   </motion.div>
 
                   {/* Fun Facts */}
-                  <motion.div
+                  {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={valuesInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.3 }}
@@ -756,7 +759,7 @@ const About = () => {
                         );
                       })}
                     </div>
-                  </motion.div>
+                  </motion.div> */}
 
                   {/* Top Skills */}
                   <motion.div

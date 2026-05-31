@@ -1,109 +1,50 @@
-import {
-  lazy,
-  Suspense,
-  useEffect,
-  useState,
-  type ReactNode,
-  type RefObject,
-} from "react";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
 import Hero from "../components/section/Hero";
 import BlurBackground from "../components/section/BlurBackground";
 import FloatingObjects from "../components/elements/FloatingObjects";
-import { useInView } from "../hooks/useInView";
+import TechStack from "../components/section/TechStack";
+import FeaturedProjects from "../components/section/FeaturedProjects";
+import Certification from "../components/section/Certification";
+import SkillsSection from "../components/section/SkillsSection";
+import Services from "../components/section/Services";
+import ToolbarHighlight from "../components/section/ToolbarHighlight";
+import TechnologyHighlight from "../components/section/TechnologyHighlight";
+import TechSkills from "../components/section/TechSkills";
+import ContactSection from "../components/section/ContactSection";
 import { hasRuntimeConstraints } from "../lib/browser";
 
-const TechStack = lazy(() => import("../components/section/TechStack"));
-const FeaturedProjects = lazy(
-  () => import("../components/section/FeaturedProjects"),
-);
-const Certification = lazy(() => import("../components/section/Certification"));
-const SkillsSection = lazy(() => import("../components/section/SkillsSection"));
-const Services = lazy(() => import("../components/section/Services"));
-const ToolbarHighlight = lazy(
-  () => import("../components/section/ToolbarHighlight"),
-);
-const TechnologyHighlight = lazy(
-  () => import("../components/section/TechnologyHighlight"),
-);
-const TechSkills = lazy(() => import("../components/section/TechSkills"));
-const ContactSection = lazy(
-  () => import("../components/section/ContactSection"),
-);
-
-type DeferredSectionProps = {
-  minHeight?: number;
-  children: ReactNode;
-};
-
-function DeferredSection({ minHeight = 460, children }: DeferredSectionProps) {
-  const { ref, isInView } = useInView({ rootMargin: "300px 0px" });
-
-  return (
-    <section
-      ref={ref as RefObject<HTMLElement>}
-      style={{ minHeight: isInView ? undefined : minHeight }}
-      className="optimize-render"
-    >
-      {isInView ? <Suspense fallback={null}>{children}</Suspense> : null}
-    </section>
-  );
-}
-
 const Index = () => {
-  const [showFloatingEffects] = useState(() => !hasRuntimeConstraints());
+  const showFloatingEffects = !hasRuntimeConstraints();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant" as ScrollBehavior,
+    });
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{
-        duration: 0.6,
-        opacity: { duration: 0.5, ease: "easeIn" },
-      }}
-      className="bg-transparent min-h-screen relative"
-    >
+    <div className="relative min-h-screen bg-transparent">
       {/* Background Elements */}
       <BlurBackground />
-      {showFloatingEffects ? <FloatingObjects /> : null}
 
-      {/* Content */}
+      {showFloatingEffects && <FloatingObjects />}
+
+      {/* Main Content */}
       <main>
         <Hero />
-        <DeferredSection minHeight={560}>
-          <TechStack />
-        </DeferredSection>
-        <DeferredSection minHeight={520}>
-          <FeaturedProjects />
-        </DeferredSection>
-        <DeferredSection minHeight={520}>
-          <Certification />
-        </DeferredSection>
-        <DeferredSection minHeight={500}>
-          <SkillsSection />
-        </DeferredSection>
-        <DeferredSection minHeight={500}>
-          <Services />
-        </DeferredSection>
-        <DeferredSection minHeight={420}>
-          <ToolbarHighlight />
-        </DeferredSection>
-        <DeferredSection minHeight={460}>
-          <TechnologyHighlight />
-        </DeferredSection>
-        <DeferredSection minHeight={520}>
-          <TechSkills />
-        </DeferredSection>
-        <DeferredSection minHeight={500}>
-          <ContactSection />
-        </DeferredSection>
+        <TechStack />
+        <FeaturedProjects />
+        <Certification />
+        <SkillsSection />
+        <Services />
+        <ToolbarHighlight />
+        <TechnologyHighlight />
+        <TechSkills />
+        <ContactSection />
       </main>
-    </motion.div>
+    </div>
   );
 };
 

@@ -249,17 +249,19 @@ const TechStack = () => {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8"
           >
             {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8"> */}
-              <Sparkles className="w-4 h-4 text-cyber-blue" />
-              <span className="text-sm font-semibold text-gray-200">
-                Tech Stack
-              </span>
+            <Sparkles className="w-4 h-4 text-cyber-blue" />
+            <span className="text-sm font-semibold text-gray-200">
+              Tech Stack
+            </span>
             {/* </div> */}
           </motion.div>
           <h2 className="text-[2.16rem] md:text-4xl font-bold mb-4 heading-gradient mt-[-50px] md:pt-12 pt-6">
-            <div className="inline-flex items-center gap-0 px-0 py-2 rounded-full text-primary">              
-                ⚡
+            <div className="inline-flex items-center gap-0 px-0 py-2 rounded-full text-primary">
+              ⚡
             </div>
-            Technical Expertise
+            <span className="bg-gradient-to-br from-primary via-purple-500 to-indigo-400 bg-clip-text text-transparent">
+              Technical Expertise
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto md:mb-20">
             Leveraging cutting-edge technologies to build

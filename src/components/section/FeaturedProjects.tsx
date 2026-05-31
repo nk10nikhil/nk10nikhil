@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import CardSwap, { Card } from "../ui/card-swap";
 import { useInView } from "../../hooks/useInView";
-import { useRuntimeProfile } from "../../hooks/useRuntimeProfile";
 
 const projects = [
   {
@@ -84,8 +83,6 @@ const FeaturedProjects = () => {
     threshold: 0.2,
     rootMargin: "120px 0px",
   });
-  const { isMobile, lowPower } = useRuntimeProfile();
-  const constrained = isMobile || lowPower;
 
   return (
     <section
@@ -100,7 +97,7 @@ const FeaturedProjects = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
-            className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-primary/10 border border-primary/20"
+            className="inline-flex items-center gap-2 mb-0 px-3 py-1 rounded-full bg-primary/10 border border-primary/20"
           >
             <Sparkles className="w-4 h-4 text-white" />
             <span className="text-sm font-semibold text-gray-200">
@@ -108,17 +105,14 @@ const FeaturedProjects = () => {
             </span>
           </motion.div>
         </div>
-        {/* Left Side - Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="z-10"
-          >
+          {/* Left Side - Content */}
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient text-center lg:text-left">
-              Featured Projects
+              <span className="text-primary">💡</span>
+              <span className="bg-gradient-to-br from-primary via-purple-500 to-indigo-400 bg-clip-text text-transparent">
+                Featured Projects
+              </span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg text-center lg:text-left">
               A collection of my software projects demonstrating my skills in
@@ -170,25 +164,23 @@ const FeaturedProjects = () => {
                 View All Projects <ArrowUpRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </motion.div>
+          </div>
 
           {/* Right Side - Card Stack */}
           <div
-            className={`relative h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] ${
-              constrained
-                ? "-translate-x-[150px] -translate-y-[140px] md:-translate-x-[230px] md:-translate-y-[130px]"
-                : "-translate-x-[180px] -translate-y-[80px] md:-translate-x-100px] md:-translate-y-[130px]"
-            } transform`}
+            className={`relative h-[320px] sm:h-[500px] md:h-[550px] lg:h-[600px]
+              -translate-x-[180px] -translate-y-[80px] md:-translate-x-100px] md:-translate-y-[130px]
+            transform`}
           >
             <CardSwap
-              width={constrained ? 580 : 600}
-              height={constrained ? 300 : 300}
-              cardDistance={constrained ? 50 : 50}
-              verticalDistance={constrained ? 60 : 60}
-              delay={constrained ? 2700 : 2700}
+              width={550}
+              height={250}
+              cardDistance={50}
+              verticalDistance={60}
+              delay={2700}
               pauseOnHover={true}
-              skewAmount={constrained ? 4 : 4}
-              easing={constrained ? "elastic" : "elastic"}
+              skewAmount={4}
+              easing={"elastic"}
               autoplayEnabled={true}
             >
               {projects.map((project) => (

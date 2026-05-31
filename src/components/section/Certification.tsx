@@ -357,12 +357,7 @@ const Certification = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <div className="text-center">
           {/* Badge */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
@@ -378,12 +373,14 @@ const Certification = () => {
             <Sparkles className="w-4 h-4 text-cyber-pink" />
           </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-clip-text text-gradient">
-            Professional Certifications
+            <span className="bg-gradient-to-br from-primary via-purple-500 to-indigo-400 bg-clip-text text-transparent">
+              <span className="text-primary">📜</span> Professional Certifications
+            </span>
           </h2>
           <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
             Industry-recognized certifications and achievements
           </p>
-        </motion.div>
+        </div>
       </div>
       {/* Carousel */}
       <div

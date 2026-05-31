@@ -222,11 +222,7 @@ const SkillsSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-12 md:mb-16"
         >
           {/* Badge */}
@@ -244,14 +240,16 @@ const SkillsSection = () => {
             <Sparkles className="w-4 h-4 text-cyber-pink" />
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
-            Technical Roles
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <span className="bg-gradient-to-br from-primary via-purple-500 to-indigo-400 bg-clip-text text-transparent">
+              <span className="text-primary">💻</span> Technical Roles
+            </span>
           </h2>
           <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-4">
             I have experience working in various technical roles. Here are some
             of the key areas where I've developed expertise recently.
           </p>
-        </motion.div>
+        </div>
 
         {/* Mobile Carousel View */}
         {isMobile ? (

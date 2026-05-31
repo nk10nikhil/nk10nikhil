@@ -11,10 +11,8 @@ import ToolbarHighlight from "../components/section/ToolbarHighlight";
 import TechnologyHighlight from "../components/section/TechnologyHighlight";
 import TechSkills from "../components/section/TechSkills";
 import ContactSection from "../components/section/ContactSection";
-import { hasRuntimeConstraints } from "../lib/browser";
 
 const Index = () => {
-  const showFloatingEffects = !hasRuntimeConstraints();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,8 +22,7 @@ const Index = () => {
     <div className="relative min-h-screen bg-transparent">
       {/* Background Elements */}
       <BlurBackground />
-
-      {showFloatingEffects && <FloatingObjects />}
+      <FloatingObjects />
 
       {/* Main Content */}
       <main>

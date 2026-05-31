@@ -1,48 +1,53 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 
+const TARGET_COUNT = 40;
+const LOADER_DELAY = 6000;
+
 const FloatingTeddy = () => {
-  const [loaded, setLoaded] = useState(false);
   const [count, setCount] = useState(0);
-  const targetCount = 40;
+  const [startCounter, setStartCounter] = useState(false);
 
   useEffect(() => {
-    // Simulating content load
     const timer = setTimeout(() => {
-      setLoaded(true);
-    }, 6000);
+      setStartCounter(true);
+    }, LOADER_DELAY);
 
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    if (!loaded) return;
-
-    // Counter animation
-    if (count < targetCount) {
-      const interval = setTimeout(() => {
-        setCount((prev) => {
-          const increment = Math.max(1, Math.floor((targetCount - prev) / 10));
-          return Math.min(prev + increment, targetCount);
-        });
-      }, 100);
-
-      return () => clearTimeout(interval);
+    if (!startCounter || count >= TARGET_COUNT) {
+      return;
     }
-    return undefined;
-  }, [count, loaded]);
+
+    const timer = setTimeout(() => {
+      setCount((prev) => {
+        const increment = Math.max(1, Math.floor((TARGET_COUNT - prev) / 8));
+
+        return Math.min(prev + increment, TARGET_COUNT);
+      });
+    }, 60);
+
+    return () => clearTimeout(timer);
+  }, [count, startCounter]);
 
   return (
     <StyledWrapper>
       <div className="card">
-        {/* Image with Counter */}
         <div className="image-container">
           <div className="floating-wrapper">
-            <img src="/robo.png" alt="Floating Teddy" className="image" />
-            {/* Counter Card */}
+            <img
+              src="/robo.png"
+              alt="Floating Teddy"
+              className="image"
+              loading="eager"
+              decoding="async"
+            />
+
             <div
               className={`counter-card ${
-                loaded ? "opacity-100" : "opacity-0"
+                startCounter ? "opacity-100" : "opacity-0"
               } transition-opacity duration-700`}
             >
               <div className="glass-card rounded-3xl p-6 backdrop-blur-xl min-h-[100px] min-w-[200px] flex flex-col items-center justify-center text-center">
@@ -50,6 +55,7 @@ const FloatingTeddy = () => {
                   {count}
                   <span className="text-white/80">+</span>
                 </div>
+
                 <div className="text-md text-white/80">Full Stack Projects</div>
               </div>
             </div>
@@ -75,24 +81,23 @@ const StyledWrapper = styled.div`
 
   .floating-wrapper {
     position: relative;
-    animation: move 6s ease-in-out infinite;
     display: inline-block;
+    animation: move 8s ease-in-out infinite;
   }
 
   .image {
     width: 200px;
     height: 200px;
     z-index: 10;
+    user-select: none;
+    pointer-events: none;
   }
 
   .counter-card {
     position: absolute;
-    bottom: 100%; /* Align bottom of the counter card */
-    left: 100%; /* Align left side of the counter card with the right side of the image */
-    transform: translate(
-      -50%,
-      50%
-    ); /* Adjust to clip bottom-left of the counter card with top-right of the image */
+    bottom: 100%;
+    left: 100%;
+    transform: translate(-50%, 50%);
     z-index: 20;
   }
 
@@ -103,28 +108,30 @@ const StyledWrapper = styled.div`
 
   @keyframes move {
     0% {
-      transform: translateX(2em) translateY(2em);
+      transform: translate3d(2em, 2em, 0);
     }
+
     25% {
-      transform: translateY(-1em) translateX(-1em);
-      rotate: -10deg;
+      transform: translate3d(-1em, -1em, 0) rotate(-8deg);
     }
+
     50% {
-      transform: translateY(1em) translateX(-1em);
+      transform: translate3d(-1em, 1em, 0);
     }
+
     75% {
-      transform: translateY(-1.25em) translateX(1em);
-      rotate: 10deg;
+      transform: translate3d(1em, -1.25em, 0) rotate(8deg);
     }
+
     100% {
-      transform: translateX(2em) translateY(2em);
+      transform: translate3d(2em, 2em, 0);
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .floating-wrapper {
       animation: none;
-      transform: translateX(0) translateY(0);
+      transform: none;
     }
   }
 `;

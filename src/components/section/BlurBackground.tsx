@@ -1,57 +1,62 @@
 import React from "react";
 
+const NOISE_TEXTURE = {
+  backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+};
+
+const blobs = [
+  {
+    className:
+      "absolute -top-[10%] -left-[10%] h-[50%] w-[50%] rounded-full bg-purple-900/20",
+    blur: "blur(60px)",
+  },
+  {
+    className:
+      "absolute -bottom-[10%] -right-[10%] h-[60%] w-[70%] rounded-full bg-indigo-900/30",
+    blur: "blur(80px)",
+  },
+  {
+    className:
+      "absolute top-[40%] right-[5%] h-[40%] w-[40%] rounded-full bg-blue-900/20",
+    blur: "blur(50px)",
+  },
+  {
+    className:
+      "absolute bottom-[10%] left-[10%] h-[30%] w-[30%] rounded-full bg-primary/30",
+    blur: "blur(60px)",
+  },
+];
+
 const BlurBackground = React.memo(() => {
   return (
     <div
       className="fixed inset-0 -z-20 overflow-hidden"
-      style={{ contain: "layout style paint" }}
+      style={{
+        contain: "layout style paint",
+      }}
+      aria-hidden="true"
     >
-      {/* Main background color */}
-      <div className="absolute inset-0 bg-background"></div>
+      {/* Base background */}
+      <div className="absolute inset-0 bg-background" />
 
-      {/* Large gradient blobs - optimized with will-change and transform */}
-      <div
-        className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full"
-        style={{
-          filter: "blur(100px)",
-          willChange: "transform",
-          transform: "translateZ(0)",
-        }}
-      />
-      <div
-        className="absolute bottom-[-10%] right-[-10%] w-[70%] h-[60%] bg-indigo-900/30 rounded-full"
-        style={{
-          filter: "blur(120px)",
-          willChange: "transform",
-          transform: "translateZ(0)",
-        }}
-      />
-      <div
-        className="absolute top-[40%] right-[5%] w-[40%] h-[40%] bg-blue-900/20 rounded-full"
-        style={{
-          filter: "blur(80px)",
-          willChange: "transform",
-          transform: "translateZ(0)",
-        }}
-      />
-      <div
-        className="absolute bottom-[10%] left-[10%] w-[30%] h-[30%] bg-primary/30 rounded-full"
-        style={{
-          filter: "blur(90px)",
-          willChange: "transform",
-          transform: "translateZ(0)",
-        }}
-      />
+      {/* Gradient blobs */}
+      {blobs.map((blob, index) => (
+        <div
+          key={index}
+          className={blob.className}
+          style={{
+            filter: blob.blur,
+          }}
+        />
+      ))}
 
-      {/* Overlay to adjust contrast - using backdrop-filter sparingly */}
-      <div className="absolute inset-0 bg-background/30"></div>
+      {/* Contrast overlay */}
+      <div className="absolute inset-0 bg-background/30" />
 
-      {/* Simplified noise texture using CSS */}
+      {/* Noise texture */}
       <div
-        className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-        }}
+        className="pointer-events-none absolute inset-0 opacity-20 mix-blend-overlay"
+        style={NOISE_TEXTURE}
       />
     </div>
   );

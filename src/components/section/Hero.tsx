@@ -1,16 +1,14 @@
 import { Button } from "../ui/button";
-import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingTeddy from "../elements/FloatingTeddy";
-import { useEffect, useState, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
-  const [count, setCount] = useState(0);
-  const targetCount = 30;
+
   const heroTextRef = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
 
@@ -28,59 +26,6 @@ const Hero = () => {
     [],
   );
 
-  // Defer GSAP animation until component is visible and loaded
-  useGSAP(
-    () => {
-      if (!loaded || hasAnimated.current) return;
-
-      // Use requestAnimationFrame for better performance
-      requestAnimationFrame(() => {
-        if (heroTextRef.current) {
-          gsap.fromTo(
-            heroTextRef.current.querySelectorAll("h1"),
-            { y: 50, opacity: 0 },
-            {
-              y: 0,
-              opacity: 1,
-              stagger: 0.15,
-              duration: 0.8,
-              ease: "power2.out",
-              force3D: true, // GPU acceleration
-            },
-          );
-          hasAnimated.current = true;
-        }
-      });
-    },
-    { dependencies: [loaded], scope: heroTextRef },
-  );
-
-  useEffect(() => {
-    // Simulating content load - reduced delay
-    const timer = setTimeout(() => {
-      setLoaded(true);
-    }, 10);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (!loaded) return;
-
-    // Counter animation - optimized
-    if (count < targetCount) {
-      const interval = setTimeout(() => {
-        setCount((prev) => {
-          const increment = Math.max(1, Math.floor((targetCount - prev) / 8));
-          return Math.min(prev + increment, targetCount);
-        });
-      }, 80);
-
-      return () => clearTimeout(interval);
-    }
-    return undefined;
-  }, [count, loaded]);
-
   const techStack = useMemo(
     () => [
       "Next.js",
@@ -97,41 +42,75 @@ const Hero = () => {
     [],
   );
 
+  useGSAP(
+    () => {
+      if (!loaded || hasAnimated.current || !heroTextRef.current) {
+        return;
+      }
+
+      requestAnimationFrame(() => {
+        gsap.fromTo(
+          heroTextRef.current!.querySelectorAll("h1"),
+          {
+            y: 40,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.12,
+            duration: 0.7,
+            ease: "power2.out",
+            force3D: true,
+          },
+        );
+
+        hasAnimated.current = true;
+      });
+    },
+    {
+      dependencies: [loaded],
+      scope: heroTextRef,
+    },
+  );
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 10);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen flex flex-col justify-center relative overflow-hidden"
-    >
-      {/* Background gradients - simplified */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+    <section className="relative min-h-screen overflow-hidden flex flex-col justify-center">
+      {/* Background */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
         <div
           className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-700/30 rounded-full"
-          style={{ filter: "blur(60px)", willChange: "transform" }}
+          style={{ filter: "blur(60px)" }}
         />
+
         <div
           className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-indigo-700/20 rounded-full"
-          style={{ filter: "blur(60px)", willChange: "transform" }}
+          style={{ filter: "blur(60px)" }}
         />
+
         <div
           className="absolute top-2/3 left-1/3 w-72 h-72 bg-blue-700/20 rounded-full"
-          style={{ filter: "blur(60px)", willChange: "transform" }}
+          style={{ filter: "blur(60px)" }}
         />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 py-10 md:py-16 z-10 mt-[-5px]">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Left Side */}
           <div className="w-full md:w-1/2 space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.4 }}
-              ref={heroTextRef}
-            >
+            <div ref={heroTextRef} className="animate-in fade-in duration-500">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight pt-10">
                 <span className="text-gradient">Software Engineer</span>
-                <br /> Crafting Cutting-Edge Innovative Solutions
+                <br />
+                Crafting Cutting-Edge Innovative Solutions
               </h1>
 
               <div className="hero-text">
@@ -149,10 +128,13 @@ const Hero = () => {
                               src={word.imgPath}
                               alt={word.text}
                               className="w-full h-full object-contain"
+                              loading="eager"
+                              decoding="async"
                               width={96}
                               height={96}
                             />
                           </div>
+
                           <span className="text-gradient">{word.text}</span>
                         </span>
                       ))}
@@ -160,35 +142,27 @@ const Hero = () => {
                   </span>
                 </h1>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.4 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-xl"
-            >
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl animate-in fade-in duration-700">
               I'm a passionate Software Engineer with a strong focus on building
               scalable, high-performance web applications and crafting seamless
               user experiences. I specialize in developing Full-Stack solutions
               using modern technologies.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              className="flex flex-wrap gap-4"
-            >
+            <div className="flex flex-wrap gap-4 animate-in fade-in duration-700">
               <Button
                 size="lg"
                 className="bg-gradient-to-br from-primary via-purple-500 to-indigo-400 animate-glow hover:bg-primary/90"
                 asChild
               >
                 <Link to="/projects">
-                  View Projects <ArrowRight className="ml-2 h-4 w-4" />
+                  View Projects
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
+
               <Button
                 size="lg"
                 variant="outline"
@@ -196,17 +170,13 @@ const Hero = () => {
                 className="hover:bg-gradient-to-br from-primary via-purple-500 to-indigo-400 hover:bg-primary/90"
               >
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                  Resume / CV <Download className="ml-2 h-4 w-4" />
+                  Resume / CV
+                  <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.4 }}
-              className="flex flex-wrap gap-3 pt-4"
-            >
+            <div className="flex flex-wrap gap-3 pt-4">
               {techStack.map((tech) => (
                 <span
                   key={tech}
@@ -215,15 +185,11 @@ const Hero = () => {
                   {tech}
                 </span>
               ))}
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="w-full md:w-1/2 flex justify-center overflow-hidden"
-          >
+          {/* Right Side */}
+          <div className="w-full md:w-1/2 flex justify-center overflow-hidden">
             <div className="flex flex-col items-center justify-center">
               <div className="my-16" />
 
@@ -291,20 +257,20 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Floating elements */}
               <div
                 className="absolute -top-4 -right-4 h-12 w-12 rounded-lg bg-indigo-600/80 animate-float"
-                style={{ animationDelay: "1.5s", willChange: "transform" }}
+                style={{ animationDelay: "1.5s" }}
               />
+
               <div
                 className="absolute -bottom-3 -left-3 h-8 w-8 rounded-full bg-primary/80 animate-float"
-                style={{ animationDelay: "0.7s", willChange: "transform" }}
+                style={{ animationDelay: "0.7s" }}
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </section>
   );
 };
 

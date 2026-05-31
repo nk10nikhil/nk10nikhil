@@ -1,13 +1,6 @@
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ScrollProgress } from "../elements/ScrollProgress";
 import { Github, Linkedin } from "../elements/BrandIcons";
@@ -28,30 +21,29 @@ const NAV_LINKS = [
   { name: "Services", path: "/services" },
   { name: "Projects", path: "/projects" },
   { name: "About", path: "/about" },
-  // { name: "Contact", path: "/contact" },
 ] as const;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   const location = useLocation();
+
   const [displayText, setDisplayText] = useState<string>(NAV_TEXTS[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [reduceRuntimeMotion] = useState(() =>
-    hasRuntimeConstraints({ includeMotion: true }),
-  );
+
+  const reduceRuntimeMotion = hasRuntimeConstraints({
+    includeMotion: true,
+  });
 
   const scrolledRef = useRef(false);
   const rafRef = useRef<number | null>(null);
 
-  const links = useMemo(() => NAV_LINKS, []);
-
   useEffect(() => {
-    if (reduceRuntimeMotion) {
-      return;
-    }
+    if (reduceRuntimeMotion) return;
 
     const currentText = NAV_TEXTS[currentIndex] ?? "";
+
     let timeoutId: number;
 
     if (displayText.length < currentText.length) {
@@ -62,16 +54,20 @@ const Navbar = () => {
       timeoutId = window.setTimeout(() => {
         setDisplayText("");
         setCurrentIndex((prev) => (prev + 1) % NAV_TEXTS.length);
-      }, 700);
+      }, 1200);
     }
 
-    return () => window.clearTimeout(timeoutId);
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
   }, [displayText, currentIndex, reduceRuntimeMotion]);
 
   useEffect(() => {
     const evaluate = () => {
       rafRef.current = null;
+
       const next = window.scrollY > 10;
+
       if (next !== scrolledRef.current) {
         scrolledRef.current = next;
         setScrolled(next);
@@ -79,19 +75,22 @@ const Navbar = () => {
     };
 
     const onScroll = () => {
-      if (rafRef.current != null) return;
+      if (rafRef.current !== null) return;
+
       rafRef.current = window.requestAnimationFrame(evaluate);
     };
 
-    // Initialize without waiting for first scroll.
     evaluate();
 
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", onScroll, {
+      passive: true,
+    });
+
     return () => {
       window.removeEventListener("scroll", onScroll);
-      if (rafRef.current != null) {
+
+      if (rafRef.current !== null) {
         window.cancelAnimationFrame(rafRef.current);
-        rafRef.current = null;
       }
     };
   }, []);
@@ -106,27 +105,38 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 rounded-lg ${
+      className={`fixed top-0 left-0 right-0 z-50 rounded-lg transition-all duration-300 ${
         scrolled
           ? "py-2 neo-blur border-b border-white/10"
           : "py-4 bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="flex items-center space-x-2"
+          onClick={closeMenu}
+        >
           <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary via-purple-500 to-indigo-400 animate-glow flex items-center justify-center">
             <img
               src="/profile.png"
               alt="Nikhil Kumar"
               className="h-7 w-7 rounded-full"
+              loading="eager"
+              decoding="async"
             />
           </div>
-          <span className="font-bold text-lg">{displayText}</span>
+
+          <span className="font-bold text-lg">
+            {displayText}
+            {!reduceRuntimeMotion && <span className="animate-pulse"></span>}
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          {links.map((link) => (
+          {NAV_LINKS.map((link) => (
             <Link
               key={link.path}
               to={link.path}
@@ -138,17 +148,13 @@ const Navbar = () => {
               }`}
             >
               {link.name}
+
               {location.pathname === link.path && (
-                <motion.div
-                  layoutId="navbar-indicator"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
               )}
             </Link>
           ))}
+
           <div className="flex space-x-2">
             <Button size="icon" variant="ghost" asChild>
               <a
@@ -159,6 +165,7 @@ const Navbar = () => {
                 <Github className="h-5 w-5" />
               </a>
             </Button>
+
             <Button size="icon" variant="ghost" asChild>
               <a
                 href="https://linkedin.com/in/nk10nikhil"
@@ -169,28 +176,31 @@ const Navbar = () => {
               </a>
             </Button>
           </div>
+
           <Button className="bg-gradient-to-br from-primary via-purple-500 to-indigo-400 animate-glow hover:bg-primary/90">
             <Link to="/contact">Contact Me</Link>
           </Button>
         </div>
 
-        {/* Mobile Navigation Toggle */}
-        <button className="md:hidden" onClick={handleToggle}>
+        {/* Mobile Toggle */}
+        <button
+          className="md:hidden"
+          onClick={handleToggle}
+          aria-label="Toggle menu"
+        >
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
 
-      {/* Mobile Navigation Menu */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-          className="md:hidden py-4 neo-blur border-b border-white/10"
-        >
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-200 ${
+          isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="py-4 neo-blur border-b border-white/10">
           <div className="container mx-auto px-4 flex flex-col space-y-4">
-            {links.map((link) => (
+            {NAV_LINKS.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -204,6 +214,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+
             <div className="flex space-x-2 py-2 px-4">
               <Button size="icon" variant="ghost" asChild>
                 <a
@@ -214,6 +225,7 @@ const Navbar = () => {
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
+
               <Button size="icon" variant="ghost" asChild>
                 <a
                   href="https://linkedin.com/in/nk10nikhil"
@@ -224,14 +236,16 @@ const Navbar = () => {
                 </a>
               </Button>
             </div>
+
             <div className="px-4 pb-2">
               <Button className="w-full bg-gradient-to-br from-primary via-purple-500 to-indigo-400 animate-glow hover:bg-primary/90">
                 <Link to="/contact">Contact Me</Link>
               </Button>
             </div>
           </div>
-        </motion.div>
-      )}
+        </div>
+      </div>
+
       <ScrollProgress />
     </nav>
   );

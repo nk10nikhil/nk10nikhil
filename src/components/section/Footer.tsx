@@ -2,11 +2,17 @@ import CircularProfile from "../elements/CircularProfile";
 import { Mail } from "lucide-react";
 import { Github, Twitter, Linkedin } from "../elements/BrandIcons";
 import { Link } from "react-router-dom";
-import React from "react";
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+const NAV_LINKS = [
+  { label: "Home", path: "/" },
+  { label: "Projects", path: "/projects" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
+];
 
 const Temp = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="py-12 border-t border-white/10">
       <div className="container mx-auto px-4 md:px-6">
@@ -14,6 +20,7 @@ const Temp = () => {
           <div>
             <div className="flex flex-col space-y-8 items-center">
               <CircularProfile />
+
               <div className="flex space-x-3 mt-6">
                 <a
                   href="https://github.com/nk10nikhil"
@@ -23,6 +30,7 @@ const Temp = () => {
                 >
                   <Github className="h-7 w-7" />
                 </a>
+
                 <a
                   href="https://twitter.com/nk10nikhil_"
                   target="_blank"
@@ -31,6 +39,7 @@ const Temp = () => {
                 >
                   <Twitter className="h-7 w-7" />
                 </a>
+
                 <a
                   href="https://linkedin.com/in/nk10nikhil"
                   target="_blank"
@@ -39,6 +48,7 @@ const Temp = () => {
                 >
                   <Linkedin className="h-7 w-7" />
                 </a>
+
                 <a
                   href="mailto:nk10nikhil@gmail.com"
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -50,37 +60,24 @@ const Temp = () => {
           </div>
 
           <div className="ml-20 hidden md:block">
-            <h3 className="font-semibold text-lg  mb-4">Navigation</h3>
+            <h3 className="font-semibold text-lg mb-4">Navigation</h3>
+
             <div className="grid grid-cols-1 gap-2">
-              <Link
-                to="/"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Home
-              </Link>
-              <Link
-                to="/projects"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Projects
-              </Link>
-              <Link
-                to="/about"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                to="/contact"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                Contact
-              </Link>
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
           <div className="hidden md:block">
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
+
             <div className="space-y-2 text-muted-foreground">
               <p>nk10nikhil@gmail.com</p>
               <p>+91 7777048666</p>
@@ -93,8 +90,9 @@ const Temp = () => {
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} nk10nikhil. All rights reserved.
+            © {CURRENT_YEAR} nk10nikhil. All rights reserved.
           </p>
+
           <span className="text-sm text-muted-foreground">
             Designed to impress, built to perform.
           </span>
@@ -106,6 +104,7 @@ const Temp = () => {
             >
               Privacy Policy
             </Link>
+
             <Link
               to="/NotFound"
               className="hover:text-foreground transition-colors"
@@ -119,4 +118,4 @@ const Temp = () => {
   );
 };
 
-export default React.memo(Temp);
+export default Temp;

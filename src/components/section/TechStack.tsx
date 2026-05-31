@@ -239,13 +239,7 @@ const TechStack = () => {
   return (
     <section className="py-16 md:py-16 bg-gradient-to-b from-background to-secondary/30 overflow-visible">
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           {/* Small badge indicator */}
           <motion.div
             initial={{ scale: 0 }}
@@ -254,20 +248,16 @@ const TechStack = () => {
             transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8"
           >
-            <Sparkles className="w-4 h-4 text-cyber-blue" />
-            <span className="text-sm font-semibold text-gray-200">
-              Tech Stack
-            </span>
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8"> */}
+              <Sparkles className="w-4 h-4 text-cyber-blue" />
+              <span className="text-sm font-semibold text-gray-200">
+                Tech Stack
+              </span>
+            {/* </div> */}
           </motion.div>
           <h2 className="text-[2.16rem] md:text-4xl font-bold mb-4 heading-gradient mt-[-50px] md:pt-12 pt-6">
-            <div className="inline-flex items-center gap-0 px-0 py-2 rounded-full">
-              <motion.span
-                animate={{ rotate: 0 }}
-                transition={{ duration: 0, repeat: Infinity, ease: "linear" }}
-                className="text-primary"
-              >
+            <div className="inline-flex items-center gap-0 px-0 py-2 rounded-full text-primary">              
                 ⚡
-              </motion.span>
             </div>
             Technical Expertise
           </h2>
@@ -283,7 +273,7 @@ const TechStack = () => {
               beautiful applications
             </span>
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 md:gap-8">
           {technologies.map((tech, index) => (
